@@ -1,0 +1,12 @@
+  .banner-image {
+      height: 105px;
+      width:60%;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.255);
+      overflow: hidden; 
+      img{
+          width: 60%;
+          height: auto;
+      }
+  }
+ 

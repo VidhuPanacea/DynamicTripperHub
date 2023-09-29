@@ -1,0 +1,23 @@
+.container {
+    width: 95%;
+    padding: 1rem;
+
+  }
+ 
+  .swiper-wrapper{
+    height: auto;
+    width: 15%;
+  }
+  .swiper .res-slide {
+    min-width: 200px;
+    max-width: 400px;
+    min-height: 200px;
+    border: 2px solid hsl(210, 100%, 50%);
+    border-radius: 20px;
+  }
+  h1{
+    color: rgba(19, 18, 18, 0.895);
+   font-size: 20px;
+  }
+ 
+  
