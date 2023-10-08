@@ -5,7 +5,8 @@ const OneCardPic = () => {
   return (
     <div>
         <div className='one-image-container'>
-        <img src={second} alt='one-image'/>
+        <img className='one-image' src={second} alt='one-image'/>
+        
         </div>
     </div>
   )
