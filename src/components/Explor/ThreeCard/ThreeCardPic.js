@@ -8,9 +8,9 @@ const ThreeCardPic = () => {
         <div className='top-div'>
         <img className='first-card-image' src={first} alt='first-top'/>
         </div>
-        <div className='bottom-div'>
+        <div className='bottom-div'> 
         <img className='second-card-image' src={first} alt='first-top'/>
-        <img className='second-card-image' src={first} alt='first-top'/>
+        <img className='third-card-image' src={first} alt='first-top'/>
         </div>
         </div>
     </div>

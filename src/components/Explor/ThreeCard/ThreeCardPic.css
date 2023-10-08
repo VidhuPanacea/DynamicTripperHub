@@ -1,7 +1,7 @@
 .three-card-container{
     height: 60vh;
-    background-color: green;
-    width: 25%;
+    width: 85%;
+    
 
 }
 .bottom-div {
@@ -10,8 +10,21 @@
 .first-card-image{
     height: 30vh;
     width: 100%;
-}
+    margin-bottom: 3%;
+    border-radius: 16px;
+    object-fit: cover;
+} 
 .second-card-image{
-    height: 30vh;
-    width: 50%;
+    height: 25vh;
+    width: 49%;
+    margin-right: 1%;
+    border-radius: 16px;
+    object-fit: cover;
+}
+.third-card-image{
+    height: 25vh;
+    width: 49%;
+    margin-left: 1%;
+    border-radius: 16px;
+    object-fit: cover;
 }
