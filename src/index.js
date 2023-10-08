@@ -33,6 +33,7 @@ import LoginPage from "views/examples/LoginPage.js";
 import LandingPage from "views/examples/LandingPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
 import Slider from "components/Slider/Slider";
+import Explor from "components/Explor/Explor";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -46,6 +47,7 @@ root.render(
       <Route path="/profile-page" element={<ProfilePage />} />
       <Route path="/login-page" element={<LoginPage />} />
       <Route path="/row-slide" element={<Slider/>}/>
+      <Route path="/div-explor" element={<Explor/>} />
       
      
 

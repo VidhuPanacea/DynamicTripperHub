@@ -15,11 +15,10 @@ const Slider = () => {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '009c1feb38mshc2f10ef77a2ef07p1ea448jsn53b541b4fbf0',
+      'X-RapidAPI-Key': 'f8d543e31fmsh05ba9c59444c9dap1729f9jsn26fc2cbbe615',
       'X-RapidAPI-Host': 'netflix54.p.rapidapi.com'
     }
   };
-
   const fetchData = async () => {
     try {
       const response = await fetch('https://netflix54.p.rapidapi.com/search/?query=stranger&offset=0&limit_titles=50&limit_suggestions=20&lang=en', options);
@@ -43,7 +42,7 @@ const Slider = () => {
 <h1 style={{marginBottom:"-1.5em"}}>MIDDLE EAST</h1>
       
       <Swiper
-        modules={[Navigation, Pagination, A11y]}
+        modules={[Navigation, Pagination, A11y]} 
         spaceBetween={15}
         slidesPerView={4}
       >

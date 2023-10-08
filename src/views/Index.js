@@ -26,6 +26,8 @@ import Examples from "./index-sections/Examples.js";
 import Download from "./index-sections/Download.js";
 import TourSlider from "./index-sections/TourSlider.js";
 import Slider from "components/Slider/Slider.js";
+import Explor from "components/Explor/Explor.js";
+
 
 
 
@@ -53,6 +55,8 @@ function Index() {
           {/* <BasicElements /> */}
           <TourSlider/>
           <Slider/>
+          <Explor/>
+         
           
           {/* <Typography /> */}
           {/* <Navbars />
