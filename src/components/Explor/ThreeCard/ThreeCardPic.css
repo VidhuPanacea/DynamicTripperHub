@@ -1,0 +1,17 @@
+.three-card-container{
+    height: 60vh;
+    background-color: green;
+    width: 25%;
+
+}
+.bottom-div {
+   display: flex;
+}
+.first-card-image{
+    height: 30vh;
+    width: 100%;
+}
+.second-card-image{
+    height: 30vh;
+    width: 50%;
+}

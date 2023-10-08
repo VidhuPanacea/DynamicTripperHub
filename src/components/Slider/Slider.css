@@ -11,8 +11,6 @@
   }
   .swiper .res-slide {
     min-width: 200px;
-    /* max-width: 400px; */
-    /* min-height: 200px; */
     border: 2px solid hsl(210, 100%, 50%);
     
   }
