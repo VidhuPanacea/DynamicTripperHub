@@ -8,3 +8,15 @@
     height: 201px;
     object-fit: cover;
   }
+  .name-para{
+    position: relative;
+    bottom: 20%;
+    color: black;
+   
+  }
+  .name-tittle{
+    position: relative;
+    bottom: 20%;
+    color: black;
+   
+  }

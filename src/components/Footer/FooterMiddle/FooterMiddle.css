@@ -1,0 +1,21 @@
+.footer-middle-para{
+    color: white;
+    font-size: 15px;
+}
+.footer-middle-container{
+    display: flex;
+}
+.footer-main-middle-container{
+    margin: 0 12%;
+}
+.footer-middle-left{
+    width: 60%;
+}
+.footer-middle-right{
+    width: 35%;
+}
+.pic-your{
+   margin-left: 4%;
+   object-fit: cover;
+   padding: 2rem; 
+}
