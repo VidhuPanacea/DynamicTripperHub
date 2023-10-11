@@ -1,0 +1,26 @@
+.footer-middle2-para{
+    color: white;
+}
+.footer-middle2-main-conatainer{
+    margin: 0 12%;
+    cursor: pointer;
+    font-size: 13px;
+    color: white;
+    flex-direction: row;
+}
+
+li{
+    display: inline;
+}
+.footer-dot{
+    line-height: 1;
+    margin: 0px;
+    font-weight: 400;
+    font-variant-numeric: tabular-nums;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.footer-themed-tittle{
+    font-style: 500;
+    color: #FFFAEB;
+}

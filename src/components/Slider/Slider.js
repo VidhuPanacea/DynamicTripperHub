@@ -44,7 +44,7 @@ const Slider = () => {
       <Swiper
         modules={[Navigation, Pagination, A11y]} 
         spaceBetween={15}
-        slidesPerView={4}
+        slidesPerView={5}
       >
         <SwiperNewButton /> 
         {

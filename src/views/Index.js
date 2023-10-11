@@ -27,6 +27,10 @@ import Download from "./index-sections/Download.js";
 import TourSlider from "./index-sections/TourSlider.js";
 import Slider from "components/Slider/Slider.js";
 import Explor from "components/Explor/Explor.js";
+import Travellers from "components/Travellers/Travellers.js";
+import Fanbook from "components/Fanbook/Fanbook.js";
+import KrishFlyier from "components/Krisflayer/KrishFlyier.js";
+import Footer from "components/Footer/Footer.js";
 
 
 
@@ -56,7 +60,11 @@ function Index() {
           <TourSlider/>
           <Slider/>
           <Explor/>
-         
+          <Travellers/>
+          <Explor/>
+          <Fanbook/>
+          <KrishFlyier/>
+          <Footer/>
           
           {/* <Typography /> */}
           {/* <Navbars />
