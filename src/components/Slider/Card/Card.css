@@ -9,14 +9,21 @@
     object-fit: cover;
   }
   .name-para{
-    position: relative;
+    position: absolute;
     bottom: 20%;
-    color: black;
+    color: white;
+    font-size: 12px;
+    margin-left: 25%;
+    cursor: pointer;
    
   }
   .name-tittle{
-    position: relative;
-    bottom: 20%;
-    color: black;
+    position: absolute;
+    bottom: 5%;
+    color: white;
+    margin-left: 35%;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
    
   }

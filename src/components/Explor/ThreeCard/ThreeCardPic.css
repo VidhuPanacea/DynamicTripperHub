@@ -1,6 +1,6 @@
 .three-card-container{
     height: 60vh;
-    width: 85%;
+    width: 100%;
     
 
 }
@@ -27,4 +27,70 @@
     margin-left: 1%;
     border-radius: 16px;
     object-fit: cover;
+}
+
+.three-card-top-image-title{
+    color: white;
+    position: absolute;
+    bottom: 60%;
+    font-size: 25px;
+    font-weight: 700;
+    margin-left: 5%;
+    cursor: pointer;
+    font-family: Poppins;
+
+}
+.three-card-top-image-price{
+    color: white;
+    position: absolute;
+    bottom: 50%;
+    font-size: 14px;
+    margin-left: 5%;
+    cursor: pointer;
+    font-family: Poppins;
+
+}
+.three-card-bottom-left-image-title{
+    color: white;
+    position: absolute;
+    bottom: 10%;
+    font-size: 25px;
+    font-weight: 700;
+    margin-left: 5%;
+    cursor: pointer;
+    font-family: Poppins;
+
+}
+.three-card-bottom-left-image-price{
+    color: white;
+    position: absolute;
+    bottom: 5%;
+    font-size: 14px;
+    margin-left: 5%;
+    cursor: pointer;
+    font-family: Poppins;
+
+}
+.three-card-bottom-right-image-tittle{
+    color: white;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    font-size: 25px;
+    font-weight: 700;
+    margin-left: 5%;
+    cursor: pointer;
+    font-family: Poppins;
+
+}
+.three-card-bottom-right-image-price{
+    color: white;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    font-size: 14px;
+    margin-left: 5%;
+    cursor: pointer;
+    font-family: Poppins;
+
 }

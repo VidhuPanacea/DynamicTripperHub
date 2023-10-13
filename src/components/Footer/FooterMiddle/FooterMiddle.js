@@ -1,5 +1,6 @@
 import React from 'react'
 import './FooterMiddle.css'
+import logo from '../../../assets/img/tripper logo.png'
 const FooterMiddle = () => {
   return (
     <div className='footer-main-middle-container'>
@@ -16,7 +17,7 @@ const FooterMiddle = () => {
         Next incubated start-up and one of the top 6 finalists of the prestigious APAC Travel Innovation Summit award.</p>
       </div>
       <div className='footer-middle-right'>
-        <img className='pic-your' src='https://pyt-images.imgix.net/images/web_app/homepage/footer_logo.gif' alt='middle'/>
+        <img className='pic-your' src={logo} alt='middle'/>
       </div>
       </div>
       <hr/>

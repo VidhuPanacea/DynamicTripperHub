@@ -1,7 +1,11 @@
-.container {
-    width: 95%;
+.container-slider-main {
+    width: 100%;
     padding: 1rem;
-
+    margin-top: 5%;
+   
+  }
+  .conainer-margin{
+    margin: 0 12%;
   }
  
   .swiper-wrapper{
@@ -15,8 +19,14 @@
     
   }
   h1{
-    color: rgba(19, 18, 18, 0.895);
    font-size: 20px;
+   font-family: Poppins;
+  }
+  .slider-tittle-main{
+    color: black;
+    font-family: Poppins;
+    font-weight: 900;
+    font-size: 21px;
   }
 
   

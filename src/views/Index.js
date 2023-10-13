@@ -31,6 +31,8 @@ import Travellers from "components/Travellers/Travellers.js";
 import Fanbook from "components/Fanbook/Fanbook.js";
 import KrishFlyier from "components/Krisflayer/KrishFlyier.js";
 import Footer from "components/Footer/Footer.js";
+import Holiday from "components/Holiday/Holiday.js";
+import Press from "components/Press/Press.js";
 
 
 
@@ -57,13 +59,22 @@ function Index() {
         <IndexHeader />
         <div className="main">
           {/* <BasicElements /> */}
-          <TourSlider/>
           <Slider/>
-          <Explor/>
+          <Slider tittle="VISA ON ARRIVAL DESTINATIONS"/>
+          <Explor tittle="QUICK GETAWAY DESTINATIONS" tittle2="Ideal for 3-5 days trip"/>
           <Travellers/>
-          <Explor/>
+          <Explor tittle="EXPLORATIONS FAR AWAY" tittle2="Ideal for 5-14 days trip"/>
           <Fanbook/>
+          <Slider tittle="TOURISM BOARD PARTNERS"/>
+          <Slider tittle="OCEANIA"/>
+          <Slider tittle="EUROPEAN HOLIDAYS"/>
+          <Holiday/>
+          <Slider tittle="SOUTH EAST ASIAN VACATIONS"/>
           <KrishFlyier/>
+          <Slider tittle="MIDDLE EAST"/>
+          <Slider tittle="SCANDINAVIA"/>
+          <Slider tittle="DESTINATION GUIDES"/>
+          <Press/>
           <Footer/>
           
           {/* <Typography /> */}
