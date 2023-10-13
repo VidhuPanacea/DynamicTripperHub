@@ -1,0 +1,44 @@
+.holiday-main-container{
+    height: 50vh;
+    margin: 0 12%;
+    background-color: #fdf3eb;
+}
+.holiday-bottom{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.holiday-tittle{
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 5%;
+    color: black;
+    margin-left: 40%;
+    font-family: Poppins;
+
+}
+.holiday-tittle2{
+    font-size: 40px;
+    font-weight: 500;
+    color: rgb(222, 13, 48);
+    margin-left: 44%;
+    font-family: Satisfy;
+    line-height: 2rem;
+
+}
+.holiday-first-image{
+    width: 15%;
+
+}
+.holiday-second-image{
+    width: 15%;
+}
+.holiday-third-image{
+    width: 15%;
+}
+.holiday-fourth-image{
+    width: 15%;
+}
+.holiday-fifth-image{
+    width: 15%;
+}

@@ -1,0 +1,55 @@
+.press-container{
+    margin: 0 12%;
+    height: 50vh;
+    margin-top: 5%;
+}
+.press-div-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3%;
+}
+.yourstory{
+    width: 10%;
+    height: 5%;
+    object-fit: cover;
+    text-decoration: underline;
+    cursor: pointer;
+    
+}
+.hindu{ 
+    width: 10%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 1rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.nasscom{
+    width: 10%;
+    height: 55%;
+    object-fit: cover;
+    margin-top: 1rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.economics{
+    width: 10%;
+    height: 5%;
+    object-fit: cover;
+    margin-top: 1rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.press-tittle{
+    text-align: center;
+    color: black;
+    font-family: Pappins;
+    font-size: 20px;
+    font-weight: 500;
+  
+}
+/* .nasscom > img:hover {
+    text-decoration: underline;
+    cursor: pointer;
+} */

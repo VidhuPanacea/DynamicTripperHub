@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
+    "get-google-fonts": "^1.2.2",
+    "google-fonts": "^1.0.0",
     "moment": "2.29.4",
     "nouislider": "15.4.0",
     "react": ">=16.8.0",

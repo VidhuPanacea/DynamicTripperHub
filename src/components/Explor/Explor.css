@@ -1,23 +1,29 @@
 .explor-container{
   background-color: #fdf3eb;
   height: 85vh;
+  margin: 0 12%;
   
 }
 .new-div-continer{
   display: flex;
   justify-content: space-between;
-  margin-left: 12%;
 
 }
 .explore-title{
-  margin-left: 12%;
-  padding-top: 2%;
+  padding-top: 4%;
   margin-top: 5%;
   font-weight: 700;
+  font-family: Poppins;
+  color: black;
 }
-.explore-title2{
-  margin-left: 12%;
-  font-weight: 200;
-  margin-bottom: 2em;
+.explore-title2{ 
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: -1em;
+  font-family: Popins;
+  color: black;
 
+}
+.explor-main-container{
+  background-color: #fdf3eb;
 }

@@ -1,0 +1,20 @@
+.honeymoon{
+    width: 90%;
+    height: 25vh;
+    border-radius: 12px;
+    margin-left: 11%;
+    object-fit: cover;
+}
+.one-traveller-title{
+    background-color: red;
+    color: white;
+    height: 6vh;
+    width: 90%;
+    border-radius: 0 0 12px 12px;
+    padding: 8px;
+    position: relative;
+    left: 11%;
+    bottom: 15%;
+    text-align: center;
+    font-family: Poppins;
+}

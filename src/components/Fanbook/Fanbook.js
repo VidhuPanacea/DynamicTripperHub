@@ -7,7 +7,10 @@ const Fanbook = () => {
     <div className='fanbook-container'>
         <div className='left-side-container'>
         <img className='gif-fanbook' src='https://media.tenor.com/sjxHvA92nF4AAAAC/castle-animated.gif' alt='gif'/>
-        </div>
+        <button className='fanbook-watch-button'>
+            Watch Viedo 
+        </button>
+        </div> 
         <div className='right-side-container'>
         <div className='fanbook-second-container'>
             <h1 className='fanbook-tittle'>FANBOOK</h1>
@@ -22,8 +25,8 @@ const Fanbook = () => {
         <img className='second-image-fanbook' src={second} alt='second'/>
         <img className='first-image-fanbook' src={first} alt='first' />
         <img className='second-image-fanbook' src={second} alt='second'/>
-        <p className='paragraph-fanbook'>hello this is my space</p>
-        <p className='fanbook-client-review'>xyz & yzx</p>
+        
+        
         <button className='fanbook-button'>
             View more Testomonials 
         </button>

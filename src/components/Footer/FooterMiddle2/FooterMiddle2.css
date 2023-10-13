@@ -4,9 +4,10 @@
 .footer-middle2-main-conatainer{
     margin: 0 12%;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 16px;
     color: white;
     flex-direction: row;
+    font-family: Pappins;
 }
 
 li{

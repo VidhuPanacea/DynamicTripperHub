@@ -10,26 +10,27 @@ import SwiperNewButton from 'components/Slider/SwiperNewButton/SwiperNewButton'
 import ThreeCardPic from './ThreeCard/ThreeCardPic';
 import OneCardPic from './OneCard/OneCardPic';
 import TwoCardPic from './TwoCard/TwoCardPic';
-const Explor = () => {
+const Explor = ({tittle, tittle2}) => {
   return (
+    <div className='explor-main-container'>  
     <div className='explor-container'>
-      <h1 className='explore-title'>QUICK GETAWAY DESTINATIONS</h1>
-      <p  style={{marginBottom:"-1.5em"}} className='explore-title2' >Ideal for 3-5 days trip</p>
+      <h1 className='explore-title' >{tittle}</h1>
+      <p  style={{marginBottom:"-1.5em"}} className='explore-title2' >{tittle2}</p>
 
    
-<div className='new-div-continer'>
+      <div className='new-div-continer'>
 
     <Swiper
         modules={[Navigation, Pagination, A11y]} 
         spaceBetween={15}
         slidesPerView={3}
       >
-        <SwiperNewButton /> 
+        <SwiperNewButton/> 
      
          <SwiperSlide ><ThreeCardPic/> </SwiperSlide>
          <SwiperSlide ><OneCardPic/> </SwiperSlide>
          <SwiperSlide > <TwoCardPic/> </SwiperSlide>
-         <SwiperSlide ><ThreeCardPic/> </SwiperSlide>
+         <SwiperSlide ><ThreeCardPic/> </SwiperSlide> 
         
 
 
@@ -37,8 +38,9 @@ const Explor = () => {
       
      
     
-</div>
+     </div>
     
+    </div>
     </div>
   )
 }

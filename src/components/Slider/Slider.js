@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, A11y } from 'swiper/modules';
 import 'swiper/css/navigation';
@@ -8,56 +8,45 @@ import 'swiper/css';
 import "./Slider.css";
 import SwiperNewButton from './SwiperNewButton/SwiperNewButton';
 import Card from './Card/Card';
+import first from '../../assets/img/Group 107.png'
 
-const Slider = () => {
-  const [myimage, setMyImage] = useState([]);
-
-  const options = {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': 'f8d543e31fmsh05ba9c59444c9dap1729f9jsn26fc2cbbe615',
-      'X-RapidAPI-Host': 'netflix54.p.rapidapi.com'
-    }
-  };
-  const fetchData = async () => {
-    try {
-      const response = await fetch('https://netflix54.p.rapidapi.com/search/?query=stranger&offset=0&limit_titles=50&limit_suggestions=20&lang=en', options);
-      const result = await response.json();
-      console.log(result);
-      setMyImage(result.titles)
-
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
-  useEffect(() => {
-    fetchData()
-  }, []);
-
+const Slider = ({tittle}) => {
+  const images = [
+    { image: require("../../assets/img/Group 107.png") }
+  ];
+  
 
   return (
-    <div className='container'>
 
-<h1 style={{marginBottom:"-1.5em"}}>MIDDLE EAST</h1>
+    <div className='conainer-margin'>
+
+    
+    <div className='container-slider-main'>
+
+    <h1 className='slider-tittle-main' style={{marginBottom:"-1.5em"}}>{tittle}</h1>
       
       <Swiper
         modules={[Navigation, Pagination, A11y]} 
         spaceBetween={15}
-        slidesPerView={5}
+        slidesPerView={5} 
       >
         <SwiperNewButton /> 
-        {
-          myimage.map((curElement) => {
-            return <SwiperSlide ><Card key={curElement.summary.id} actualData={curElement} />  </SwiperSlide>
-          })
-        }
-
-
+      
+             <SwiperSlide ><Card img={first} tittle="first"/>  </SwiperSlide>
+             <SwiperSlide ><Card img={first} tittle="first"/>  </SwiperSlide>
+             <SwiperSlide ><Card img={first} tittle="first"/>  </SwiperSlide>
+             <SwiperSlide ><Card img={first} tittle="first"/>  </SwiperSlide>
+             <SwiperSlide ><Card img={first} tittle="first"/>  </SwiperSlide>
+             <SwiperSlide ><Card img={first} tittle="first"/>  </SwiperSlide>
+             <SwiperSlide ><Card img={first} tittle="first"/>  </SwiperSlide>
+             <SwiperSlide ><Card img={first} tittle="first"/>  </SwiperSlide>
+             <SwiperSlide ><Card img={first} tittle="first"/>  </SwiperSlide>
+             <SwiperSlide ><Card img={first} tittle="first"/>  </SwiperSlide>
       </Swiper>
 
     </div>
+    </div>
   )
-}
+  }
 
 export default Slider
