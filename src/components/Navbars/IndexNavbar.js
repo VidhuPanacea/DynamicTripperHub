@@ -16,6 +16,8 @@ import {
   Container,
   UncontrolledTooltip,
 } from "reactstrap";
+import menu from "service/navigation.service";
+import logo from "../../assets/img/tripperHubpng 1.png"
 
 function IndexNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
@@ -58,7 +60,7 @@ function IndexNavbar() {
               target="_blank"
               id="navbar-brand"
             >
-              Tripper Hub
+              <img width="250px" src={logo} alt="" />
             </NavbarBrand>
             <button
               className="navbar-toggler navbar-toggler"
@@ -79,53 +81,40 @@ function IndexNavbar() {
             isOpen={collapseOpen}
             navbar
           >
-            <Nav navbar>
-              <NavItem>
-                <NavLink href="#">
-                  <p>Home</p>
-                </NavLink>
-              </NavItem>
-              <UncontrolledDropdown nav>
-                <DropdownToggle
-                  caret
-                  color="default"
-                  href="#pablo"
-                  nav
-                  onClick={(e) => e.preventDefault()}
-                >
-                  <p>Destinations</p>
-                </DropdownToggle>
-                <DropdownMenu>
-                  <DropdownItem tag={Link}>
-                    Shimla
-                  </DropdownItem>
-                  <DropdownItem
-                    target="_blank"
-                  >
-                    Manali
-                  </DropdownItem>
-                  <DropdownItem tag={Link}>
-                    Chail
-                  </DropdownItem>
-                  <DropdownItem
-                    target="_blank"
-                  >
-                    Mandi
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
-              <NavItem>
-                <Link state={{ pkg: { name: "Vidhu" } }} to="/page">
-                  <p>About Us</p>
-                </Link>
 
-              </NavItem>
-              <NavItem>
-                <NavLink href="#">
-                  <p>Contact
-                    Us</p>
-                </NavLink>
-              </NavItem>
+
+            <Nav navbar>
+              {menu.map((menu) => {
+                if (menu.subMenu.length > 0) {
+                  return <UncontrolledDropdown nav>
+                    <DropdownToggle
+                      caret
+                      color="default"
+                      href="#pablo"
+                      nav
+                      onClick={(e) => e.preventDefault()}
+                    >
+                      <p>Destinations</p>
+                    </DropdownToggle>
+
+                    <DropdownMenu>
+                      {menu.subMenu.map((sm) => (<DropdownItem tag={Link}>
+                        {sm.name}
+                      </DropdownItem>))}
+                    </DropdownMenu>
+                  </UncontrolledDropdown>
+                }
+                else {
+                  return <NavItem>
+                    <NavLink href="#">
+                      <p>{menu.name}</p>
+                    </NavLink>
+                  </NavItem>
+                }
+
+              })}
+
+
 
 
             </Nav>

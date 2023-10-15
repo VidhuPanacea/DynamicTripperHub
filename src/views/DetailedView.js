@@ -18,5 +18,11 @@ export default function DetailedView(props) {
     return <>
         <h1>{pkg?.name}</h1>
         <h1>{pkg?.name}</h1>
+        <div className='banner-image' >
+                
+                    <img src={pkg?.image} alt={pkg?.name} />
+                
+            
+        </div>
     </>
 }

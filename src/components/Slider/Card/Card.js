@@ -12,7 +12,7 @@ const Card = ({ img, tittle, pkg }) => {
 
     <div className='banner-image' >
       <figure>
-        <Link params={{ pkg: pkg }}  to="/detailed" state={{ pkg: pkg }} >
+        <Link params={{ pkg: pkg }}  to="/packages" state={{ pkg: pkg }} >
           <img src={img} alt={tittle} />
         </Link>
       </figure>
