@@ -34,6 +34,8 @@ import LandingPage from "views/examples/LandingPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
 import Slider from "components/Slider/Slider";
 import Explor from "components/Explor/Explor";
+import DetailedView from "views/DetailedView";
+import Page from "views/Page";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -42,13 +44,15 @@ root.render(
   <BrowserRouter>
     <Routes>
     <Route path="/home" element={<Index />} />
-      <Route path="/nucleo-icons" element={<NucleoIcons />} />
+    <Route path="/detailed" element={<DetailedView />} />
+    <Route path="/page" element={<Page />} />
+      {/* <Route path="/nucleo-icons" element={<NucleoIcons />} />
       <Route path="/landing-page" element={<LandingPage />} />
       <Route path="/profile-page" element={<ProfilePage />} />
       <Route path="/login-page" element={<LoginPage />} />
       <Route path="/row-slide" element={<Slider/>}/>
       <Route path="/div-explor" element={<Explor/>} />
-      
+       */}
      
 
       <Route path="*" element={<Navigate to="/home" replace />} />

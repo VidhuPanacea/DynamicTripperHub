@@ -115,14 +115,15 @@ function IndexNavbar() {
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem>
-                <NavLink href="#">
+                <Link state={{ pkg: { name: "Vidhu" } }} to="/page">
                   <p>About Us</p>
-                </NavLink>
+                </Link>
+
               </NavItem>
               <NavItem>
                 <NavLink href="#">
                   <p>Contact
-                     Us</p>
+                    Us</p>
                 </NavLink>
               </NavItem>
 
