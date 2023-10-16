@@ -18,10 +18,19 @@ import {
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
+import IndexNavbar from "components/Navbars/IndexNavbar";
+import { useLocation } from "react-router-dom";
+import { useState } from "react";
 
-function ProfilePage() {
+function ProfilePage(props) {
   const [pills, setPills] = React.useState("2");
+  const [pkg, setPkg] = useState({})
+  const location = useLocation()
   React.useEffect(() => {
+
+    console.log(location?.state)
+    setPkg(location?.state?.pkg)
+
     document.body.classList.add("profile-page");
     document.body.classList.add("sidebar-collapse");
     document.documentElement.classList.remove("nav-open");
@@ -31,12 +40,14 @@ function ProfilePage() {
       document.body.classList.remove("profile-page");
       document.body.classList.remove("sidebar-collapse");
     };
+
   }, []);
+
   return (
     <>
-      <ExamplesNavbar />
+      <IndexNavbar />
       <div className="wrapper">
-        <ProfilePageHeader />
+        <ProfilePageHeader pkg={pkg} />
         <div className="section">
           <Container>
             <div className="button-container">

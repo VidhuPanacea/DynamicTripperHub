@@ -46,15 +46,15 @@ root.render(
     <Routes>
     <Route path="/home" element={<Index />} />
     <Route path="/detailed" element={<DetailedView />} />
-    <Route path="/packages" element={<PackageListing />} />
+    {/* <Route path="/packages" element={<PackageListing />} /> */}
     <Route path="/page" element={<Page />} />
       {/* <Route path="/nucleo-icons" element={<NucleoIcons />} />
-      <Route path="/landing-page" element={<LandingPage />} />
-      <Route path="/profile-page" element={<ProfilePage />} />
       <Route path="/login-page" element={<LoginPage />} />
       <Route path="/row-slide" element={<Slider/>}/>
-      <Route path="/div-explor" element={<Explor/>} />
-       */}
+    */}
+    {/* <Route path="/landing-page" element={<LandingPage />} /> */}
+    <Route path="/packages" element={<ProfilePage />} />
+    {/* <Route path="/div-explor" element={<Explor/>} /> */}
      
 
       <Route path="*" element={<Navigate to="/home" replace />} />

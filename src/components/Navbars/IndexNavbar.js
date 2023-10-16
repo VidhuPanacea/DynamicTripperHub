@@ -94,7 +94,7 @@ function IndexNavbar() {
                       nav
                       onClick={(e) => e.preventDefault()}
                     >
-                      <p>Destinations</p>
+                      <p>{menu.name}</p>
                     </DropdownToggle>
 
                     <DropdownMenu>

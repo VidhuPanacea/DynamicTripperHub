@@ -27,7 +27,6 @@ export default function PackageListing(props) {
 
     return <>
         <h1>{pkg?.name}</h1>
-        <h1>{pkg?.name}</h1>
 
 
         <div className='conainer-margin'>

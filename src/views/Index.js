@@ -1,8 +1,16 @@
 import React from "react";
 
 // reactstrap components
-// import {
-// } from "reactstrap";
+import {
+  Button,
+  Input,
+  InputGroupAddon,
+  InputGroupText,
+  InputGroup,
+  Container,
+  Row,
+  Col
+} from "reactstrap";
 
 // core components
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
@@ -59,24 +67,29 @@ function Index() {
       <div className="wrapper">
         <IndexHeader />
         <div className="main">
-          {/* <BasicElements /> */}
-          <Slider></Slider>
-          {/* <DetailedView/> */}
-          {/* <Typography /> */}
-          {/* <Navbars />
-          <Tabs />
-          <Pagination />
-          <Notifications />
-          
-          <Javascript />
-          <Carousel />
-          <NucleoIcons />
-          <CompleteExamples />
-          <SignUp />
-          <Examples />
-          <Download /> */}
+          {/* About Us */}
+          <Container style={{ textAlign: "center", padding: "2em 0" }}>
+            <Row style={{ paddingTop: "2em" }}>
+              <Col md="12">
+                <h1 className="title-main">Tripper <span>Hub</span></h1>
+              </Col>
+              <Col md="12">
+                <p className="text-main"><span>Tripperhub.com</span> agency based in New Delhi. Offering tailor-made tour packages of India at competitive prices. We organize various quality travel arrangements like escorted tours, incentive travel, and discounted hotel bookings in India. There are some parts of the world that, once visited, get into your heart and won’t go. For us, India is such a place... </p>
+              </Col>
+            </Row>
+
+
+
+          </Container>
+          <Container>
+            <Slider tittle={"Trending"} clrtitle={" Destinations"}></Slider>
+          </Container>
+          <Container>
+            
+          </Container>
+
         </div>
-        {/* <DarkFooter /> */}
+
       </div>
     </>
   );

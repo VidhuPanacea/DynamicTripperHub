@@ -12,7 +12,7 @@ import first from '../../assets/img/Group 107.png'
 import { Link } from 'react-router-dom';
 import Packages from 'service/package.service';
 
-const Slider = ({ tittle }) => {
+const Slider = ({ tittle,clrtitle }) => {
   const images = [
     { image: require("../../assets/img/Group 107.png") }
   ];
@@ -25,7 +25,7 @@ const Slider = ({ tittle }) => {
 
       <div className='container-slider-main'>
 
-        <h1 className='slider-tittle-main' style={{ marginBottom: "-1.5em" }}>{tittle}</h1>
+        <h1 className='slider-tittle-main' style={{ marginBottom: "-1.5em" }}>{tittle}<span>{clrtitle}</span></h1>
 
         <Swiper
           modules={[Navigation, Pagination, A11y]}
