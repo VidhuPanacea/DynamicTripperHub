@@ -4,21 +4,19 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 const Card = ({ img, tittle, pkg }) => {
   const navigate = useNavigate()
-  const navigateToPage = () => {
-    alert(1)
-    navigate("/detailed")
-  }
+
   return (
+    <Link to="/packages" state={{ pkg: pkg }} >
+      <div className='banner-image' style={{}} >
+        <img src={img} alt="" >
+          
+        </img>
+        <p className='banner-text'>
+            {pkg.name}
+          </p>
+      </div>
 
-    <div className='banner-image' >
-      <figure>
-        <Link params={{ pkg: pkg }}  to="/packages" state={{ pkg: pkg }} >
-          <img src={img} alt={tittle} />
-        </Link>
-      </figure>
-    </div>
-
-
+    </Link>
   )
 }
 

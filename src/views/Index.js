@@ -85,7 +85,7 @@ function Index() {
             <Slider tittle={"Trending"} clrtitle={" Destinations"}></Slider>
           </Container>
           <Container>
-            
+          <Slider tittle={"International"} clrtitle={" Destinations"}></Slider>
           </Container>
 
         </div>

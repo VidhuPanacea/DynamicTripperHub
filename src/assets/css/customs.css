@@ -1,12 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-:root{
+:root {
     --cprimary: #FF6A3E;
     --csecondary: #606060;
 }
-*{
+
+.banner-image {
+    position: relative;
+}
+
+.banner-text {
+    position: absolute;
+    bottom: 0;
+    font-size: 1rem;
+    padding: .5em;
+    color: white;
+    font-weight: 500;
+    background-color: #0000005d;
+    width: 100%;
+    margin: 0;
+    border-radius: 10px;
+
+}
+
+.listcard-container {
+    background-color: yellow;
+    border-radius: 10px;
+}
+
+.view-package-btn {
+    width: 100%;
+    border: none;
+    background-color: var(--cprimary);
+    color: white;
+    font-family: "Poppins";
+    border-radius: 5px;
+    padding: 1em;
+    height: max-content;
+}
+.view-package-btn :hover{
+    color: white !important;
+}
+
+* {
     font-family: "Poppins";
 }
+
 .swiper {
     width: 100%;
     height: 100%;
@@ -41,15 +80,19 @@
     margin-top: 0 !important;
     margin-bottom: 1em;
 }
-.title-main{
+
+.title-main {
     color: #606060;
     font-size: 2rem;
     font-weight: 600;
 }
-.title-main span, .text-main span{
+
+.title-main span,
+.text-main span {
     color: #FF6A3E;
 }
-.text-main{
+
+.text-main {
     color: #343434;
     font-weight: 500;
 }
