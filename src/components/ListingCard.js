@@ -15,30 +15,24 @@ import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 export default function ListingCard(props) {
 
-    const [pkg, setPkg] = useState({})
-    const location = useLocation()
-    useEffect(() => {
 
-        console.log(location?.state)
-        setPkg(location?.state?.pkg)
-
-
-    }, []);
     return (
         <Container>
-
-            <Row className="listcard-container">
-                <Col md="3" style={{ paddingLeft: "0" }}>
-                    <img src={pkg.image} alt={""} />
-                </Col>
-                <Col md="6" style={{ padding: "1em" }}>
-                    <h3>Hllo</h3>
-                    <p>Hi, this package is very good</p>
-                </Col>
-                <Col style={{ padding: "1em 1em", display: "flex", alignItems: "flex-end" }} md="3">
-                    <button className="view-package-btn">View Package</button>
-                </Col>
-            </Row>
+            <Link state={{ pkg: props.pkg }} to={`/page/${props.pkg.path}`}>
+                <Row className="listcard-container">
+                    <Col md="3" style={{ paddingLeft: "0" }}>
+                        <img style={{height:"100%",borderTopLeftRadius:"10px",borderBottomLeftRadius:"10px"}} src={props.pkg.coverimage} alt={""} />
+                    </Col>
+                    <Col md="6" style={{ padding: "1em" }}>
+                        <h3>{props.pkg.name}</h3>
+                        <p>{props.pkg.description}</p>
+                    </Col>
+                    <Col style={{ padding: "1em 1em", display: "flex", flexDirection: "column", justifyContent: "space-between" }} md="3">
+                        {props.pkg.inclusions.map(incl => (<p>{incl.name}</p>))}
+                        <button  className="view-package-btn">View Package</button>
+                    </Col>
+                </Row>
+            </Link>
 
         </Container>
     )

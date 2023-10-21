@@ -6,7 +6,7 @@ const Card = ({ img, tittle, pkg }) => {
   const navigate = useNavigate()
 
   return (
-    <Link to="/packages" state={{ pkg: pkg }} >
+    <Link to= {`/packages/${pkg.destinations}`} state={{ pkg: pkg }} >
       <div className='banner-image' style={{}} >
         <img src={img} alt="" >
           

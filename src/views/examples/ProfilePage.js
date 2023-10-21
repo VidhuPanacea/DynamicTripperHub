@@ -19,6 +19,7 @@ import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 import IndexNavbar from "components/Navbars/IndexNavbar";
+import listings from "service/listing.service";
 import ListingCard from "components/ListingCard";
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
@@ -26,11 +27,13 @@ import { useState } from "react";
 function ProfilePage(props) {
   const [pills, setPills] = React.useState("2");
   const [pkg, setPkg] = useState({})
+  const [listingss, setListingss] = useState([])
   const location = useLocation()
   React.useEffect(() => {
 
     console.log(location?.state)
     setPkg(location?.state?.pkg)
+    setListingss(listings)
 
     document.body.classList.add("profile-page");
     document.body.classList.add("sidebar-collapse");
@@ -62,7 +65,7 @@ function ProfilePage(props) {
 
           </Container>
           <Container>
-            <ListingCard></ListingCard>
+            {listingss.map(listing => <ListingCard pkg={listing}></ListingCard>)}
 
           </Container>
         </div>

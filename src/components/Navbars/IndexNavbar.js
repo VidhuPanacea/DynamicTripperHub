@@ -56,8 +56,7 @@ function IndexNavbar() {
         <Container>
           <div className="navbar-translate">
             <NavbarBrand
-              href="#"
-              target="_blank"
+              href="/home"
               id="navbar-brand"
             >
               <img width="250px" src={logo} alt="" />

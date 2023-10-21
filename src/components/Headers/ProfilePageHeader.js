@@ -13,7 +13,6 @@ function ProfilePageHeader(props) {
   const location = useLocation()
   React.useEffect(() => {
 
-    console.log(location?.state)
     setPkg(location?.state?.pkg)
 
     if (window.innerWidth > 991) {
@@ -42,8 +41,8 @@ function ProfilePageHeader(props) {
           ref={pageHeader}
         ></div>
         <Container>
-          <h3 className="title">{pkg?.name}</h3>
-          <p className="category">{pkg?.destinations}</p>
+          <h3 className="title">{pkg?.destinations} </h3>
+          <p className="category">{"packages"}</p>
 
         </Container>
       </div>

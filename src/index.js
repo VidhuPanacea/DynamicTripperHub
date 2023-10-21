@@ -47,13 +47,13 @@ root.render(
     <Route path="/home" element={<Index />} />
     <Route path="/detailed" element={<DetailedView />} />
     {/* <Route path="/packages" element={<PackageListing />} /> */}
-    <Route path="/page" element={<Page />} />
+    <Route path="/page/:pagename" element={<Page />} />
       {/* <Route path="/nucleo-icons" element={<NucleoIcons />} />
       <Route path="/login-page" element={<LoginPage />} />
       <Route path="/row-slide" element={<Slider/>}/>
     */}
     {/* <Route path="/landing-page" element={<LandingPage />} /> */}
-    <Route path="/packages" element={<ProfilePage />} />
+    <Route path="/packages/:packagename" element={<ProfilePage />} />
     {/* <Route path="/div-explor" element={<Explor/>} /> */}
      
 

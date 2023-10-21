@@ -24,9 +24,12 @@
 }
 
 .listcard-container {
-    background-color: yellow;
+    background-color: rgb(235, 235, 235);
     border-radius: 10px;
+    margin-bottom: 2em;
+   
 }
+
 
 .view-package-btn {
     width: 100%;
@@ -44,6 +47,7 @@
 
 * {
     font-family: "Poppins";
+    text-decoration: none !important;
 }
 
 .swiper {
