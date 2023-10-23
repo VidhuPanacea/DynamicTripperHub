@@ -1,20 +1,4 @@
-/*
 
-=========================================================
-* Now UI Kit React - v1.5.2
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/now-ui-kit-react
-* Copyright 2023 Creative Tim (http://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/now-ui-kit-react/blob/main/LICENSE.md)
-
-* Designed by www.invisionapp.com Coded by www.creative-tim.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes, Navigate, Router } from "react-router-dom";
@@ -27,16 +11,14 @@ import "assets/demo/nucleo-icons-page-styles.css?v=1.5.0";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import './assets/css/customs.css'
-import Index from "views/Index.js";
-import NucleoIcons from "views/NucleoIcons.js";
-import LoginPage from "views/examples/LoginPage.js";
-import LandingPage from "views/examples/LandingPage.js";
-import ProfilePage from "views/examples/ProfilePage.js";
-import Slider from "components/Slider/Slider";
-import Explor from "components/Explor/Explor";
-import DetailedView from "views/DetailedView";
-import Page from "views/Page";
+import Home from "views/Home.js";
+import Packages from "views/Packages";
 import PackageListing from "views/PackageListing";
+import PackageDetails from "views/PackageDetails";
+import Blogs from "views/Blogs";
+import DetailedBlog from "views/DetailedBlog";
+import About from "views/About";
+import Contact from "views/Contact";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -44,20 +26,38 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <Routes>
-    <Route path="/home" element={<Index />} />
-    <Route path="/detailed" element={<DetailedView />} />
-    {/* <Route path="/packages" element={<PackageListing />} /> */}
-    <Route path="/page/:pagename" element={<Page />} />
-      {/* <Route path="/nucleo-icons" element={<NucleoIcons />} />
-      <Route path="/login-page" element={<LoginPage />} />
-      <Route path="/row-slide" element={<Slider/>}/>
-    */}
-    {/* <Route path="/landing-page" element={<LandingPage />} /> */}
-    <Route path="/packages/:packagename" element={<ProfilePage />} />
-    {/* <Route path="/div-explor" element={<Explor/>} /> */}
-     
-
+      <Route path="/" element={<Home />} />
+      <Route path="/packages" element={<Packages/>} />  
+      <Route path="/packages/:destination" element={<PackageListing />} />
+      <Route path="/packages/:destination/:packageName" element={<PackageDetails />} />
+      <Route path="/blogs" element={<Blogs />} />
+      <Route path="/blogs/:blogName" element={<DetailedBlog />} />
+      <Route path="/about-us" element={<About />} />
+      <Route path="/contact-us" element={<Contact />} />
       <Route path="*" element={<Navigate to="/home" replace />} />
     </Routes>
   </BrowserRouter>
 );
+
+
+//Packages Flow
+//Home > Packages/Destinations > DestinationName > PackageName  
+//<Home> --  <Packages> --  <PackageListing> --  <DetailedPackage>
+ 
+
+
+
+// <BrowserRouter>
+//   <Routes>
+//     <Route path="/home" element={<Home />} />
+//     <Route path="/page/:pagename" element={<Page />} />
+//     <Route path="/detailed" element={<DetailedView />} />
+//     <Route path="/nucleo-icons" element={<NucleoIcons />} />
+//     <Route path="/login-page" element={<LoginPage />} />
+//     <Route path="/row-slide" element={<Slider />} />
+//     <Route path="/landing-page" element={<LandingPage />} />
+//     <Route path="/packages/:packagename" element={<ProfilePage />} />
+//     <Route path="/div-explor" element={<Explor />} />
+//     <Route path="*" element={<Navigate to="/home" replace />} />
+//   </Routes>
+// </BrowserRouter>

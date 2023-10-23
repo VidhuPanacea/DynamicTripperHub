@@ -12,8 +12,14 @@ function ProfilePageHeader(props) {
   const [pkg, setPkg] = useState({})
   const location = useLocation()
   React.useEffect(() => {
-
-    setPkg(location?.state?.pkg)
+    if (location.state) {
+      console.log(location?.state?.pkg, "state")
+      setPkg(location?.state?.pkg)
+    }
+    else{
+      console.log(pkg, "props")
+      setPkg(props.pkg)
+    }
 
     if (window.innerWidth > 991) {
       const updateScroll = () => {
@@ -26,7 +32,7 @@ function ProfilePageHeader(props) {
         window.removeEventListener("scroll", updateScroll);
       };
     }
-  },[]);
+  }, []);
   return (
     <>
       <div

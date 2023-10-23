@@ -13,6 +13,7 @@ import {
   Col,
   UncontrolledTooltip
 } from "reactstrap";
+import ListingHeader from "components/Headers/ListingHeader";
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";

@@ -75,12 +75,12 @@ function IndexHeader() {
 
   return (
     <>
-      <div className="page-header clear-filter" filter-color="">
+      <div className="page-header clear-filter " filter-color="">
 
         <div
           className="page-header-image"
           style={{
-            backgroundImage: "url(" + require("assets/img/header.jpg") + ")"
+            backgroundImage: "url(" + require("assets/img/grzegorz-janysek-ZK4LMFctKS4-unsplash.jpg") + ")"
           }}
           ref={pageHeader}
         ></div>
@@ -145,7 +145,7 @@ function IndexHeader() {
                         type="submit"
                         block
                         className="btn-round m-0"
-                        color="info"
+                        style={{ backgroundColor: "var(--cprimary)" }}
                         href="#pablo"
                         size="lg"
                       >

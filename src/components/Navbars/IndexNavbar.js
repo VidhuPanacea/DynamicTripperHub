@@ -52,11 +52,11 @@ function IndexNavbar() {
           }}
         />
       ) : null}
-      <Navbar className={"fixed-top " + navbarColor} expand="lg" color="info">
+      <Navbar className={"fixed-top " + navbarColor} expand="lg" color={"orangered"}>
         <Container>
           <div className="navbar-translate">
             <NavbarBrand
-              href="/home"
+              href="/"
               id="navbar-brand"
             >
               <img width="250px" src={logo} alt="" />

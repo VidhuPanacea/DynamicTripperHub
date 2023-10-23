@@ -5,7 +5,7 @@ import { Container } from "reactstrap";
 
 // core components
 
-function ListingHeader() {
+function ListingHeader(props) {
   let pageHeader = React.createRef();
 
   React.useEffect(() => {
@@ -24,35 +24,34 @@ function ListingHeader() {
   return (
     <>
       <div
-        className="page-header clear-filter page-header-small"
-        filter-color="blue"
+        className="page-header page-header-small"
       >
         <div
           className="page-header-image"
           style={{
-            backgroundImage: "url(" + require("assets/img/bg5.jpg") + ")"
+            backgroundImage: `url(${props.data?.image})`
           }}
           ref={pageHeader}
         ></div>
         <Container>
-          <div className="photo-container">
-            <img alt="..." src={require("assets/img/ryan.jpg")}></img>
-          </div>
-          <h3 className="title">Ryan Scheinder</h3>
-          <p className="category">Photographer</p>
+          <h3 className="title">{props.data?.name}</h3>
           <div className="content">
-            <div className="social-description">
-              <h2>26</h2>
-              <p>Comments</p>
-            </div>
-            <div className="social-description">
-              <h2>26</h2>
-              <p>Comments</p>
-            </div>
-            <div className="social-description">
-              <h2>48</h2>
-              <p>Bookmarks</p>
-            </div>
+            <button className="primarybtn">View All Packages</button>
+          </div>
+        </Container>
+      </div>
+      <div style={{ backgroundColor: "#1D2024" }}>
+        <Container>
+          <div className="underHeader"> 
+            <p>
+              Ideal Duration <br /> <span>5-6 Days</span>
+            </p>
+            <p>
+              Starts From <br /> <span>₹5000</span>
+            </p>
+            <p>
+              Suitable for <br /> <span>2 Adults</span>
+            </p>
           </div>
         </Container>
       </div>

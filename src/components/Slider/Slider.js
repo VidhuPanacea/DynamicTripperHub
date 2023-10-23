@@ -10,9 +10,9 @@ import SwiperNewButton from './SwiperNewButton/SwiperNewButton';
 import Card from './Card/Card';
 import first from '../../assets/img/Group 107.png'
 import { Link } from 'react-router-dom';
-import Packages from 'service/package.service';
+import {internationalPackages} from 'service/package.service';
 
-const Slider = ({ tittle,clrtitle }) => {
+const Slider = ({ uptext,tittle, clrtitle }) => {
   const images = [
     { image: require("../../assets/img/Group 107.png") }
   ];
@@ -25,6 +25,7 @@ const Slider = ({ tittle,clrtitle }) => {
 
       <div className='container-slider-main'>
 
+        <h3 className="style-heading">{uptext}</h3>
         <h1 className='slider-tittle-main' style={{ marginBottom: "-1.5em" }}>{tittle}<span>{clrtitle}</span></h1>
 
         <Swiper
@@ -33,7 +34,7 @@ const Slider = ({ tittle,clrtitle }) => {
           slidesPerView={5}
         >
           <SwiperNewButton />
-          {Packages.map(pkg => (<SwiperSlide ><Card pkg={pkg} img={pkg.image} tittle={pkg.name} />  </SwiperSlide>))}
+          {internationalPackages.map(pkg => (<SwiperSlide ><Card pkg={pkg} img={pkg.image} tittle={pkg.name} />  </SwiperSlide>))}
         </Swiper>
 
       </div>

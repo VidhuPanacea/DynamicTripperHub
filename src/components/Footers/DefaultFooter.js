@@ -1,5 +1,6 @@
 /*eslint-disable*/
 import React from "react";
+import { Link } from "react-router-dom";
 
 // reactstrap components
 import { Container } from "reactstrap";
@@ -15,44 +16,42 @@ function DefaultFooter() {
             <ul>
               <li>
                 <a
-                  href="https://www.creative-tim.com?ref=nukr-default-footer"
-                  target="_blank"
+                  href="/"
+                  
                 >
-                  Creative Tim
+                  Tripper Hub
                 </a>
               </li>
               <li>
-                <a
-                  href="http://presentation.creative-tim.com?ref=nukr-default-footer"
-                  target="_blank"
+                <Link
+                to="/about-us"
                 >
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="http://blog.creative-tim.com?ref=nukr-default-footer"
-                  target="_blank"
+                <Link
+                  to="/blogs"
                 >
                   Blog
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
           <div className="copyright" id="copyright">
             © {new Date().getFullYear()}, Designed by{" "}
             <a
-              href="https://www.invisionapp.com?ref=nukr-default-footer"
+              href="#"
               target="_blank"
             >
-              Invision
+              Panacee Software Soltutions
             </a>
             . Coded by{" "}
             <a
-              href="https://www.creative-tim.com?ref=nukr-default-footer"
+              href="#"
               target="_blank"
             >
-              Creative Tim
+              Vxdhu
             </a>
             .
           </div>

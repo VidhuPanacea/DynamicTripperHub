@@ -1,4 +1,16 @@
-import Packages from "service/package.service"
+import {
+    Button,
+    Input,
+    InputGroupAddon,
+    InputGroupText,
+    InputGroup,
+    Container,
+    Row,
+    Card,
+    CardBody,
+    Col
+} from "reactstrap";
+import { internationalPackages } from "service/package.service"
 import { useLocation } from "react-router-dom"
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
@@ -12,10 +24,14 @@ import 'swiper/css';
 import SwiperNewButton from "components/Slider/SwiperNewButton/SwiperNewButton";
 import DetailCard from "components/Slider/Card/DetailCard";
 import { Link } from 'react-router-dom';
+import IndexNavbar from "components/Navbars/IndexNavbar";
+import ListingHeader from "components/Headers/ListingHeader";
+import ListingCard from "components/ListingCard";
+import DefaultFooter from "components/Footers/DefaultFooter";
 
 export default function PackageListing(props) {
 
-    const [pkg, setPkg] = useState({})
+    const [pkg, setPkg] = useState([])
 
     const location = useLocation()
     useEffect(() => {
@@ -26,26 +42,26 @@ export default function PackageListing(props) {
 
 
     return <>
-        <h1>{pkg?.name}</h1>
+        <IndexNavbar></IndexNavbar>
+        <div className="wrapper">
+            <ListingHeader data={pkg} />
 
-
-        <div className='conainer-margin'>
-
-
-            <div className='container-slider-main'>
-
-                <h1 className='slider-tittle-main' style={{ marginBottom: "-1.5em" }}>Hello</h1>
-
-                <Swiper
-                    modules={[Navigation, Pagination, A11y]}
-                    spaceBetween={15}
-                    slidesPerView={5}
-                >
-                    <SwiperNewButton />
-                    {Packages.map(pkg => (<SwiperSlide ><DetailCard pkg={pkg} img={pkg.image} tittle={pkg.name} />  </SwiperSlide>))}
-                </Swiper>
-
-            </div>
         </div>
+        <Container style={{ padding: "3em 0" }}>
+            <Row >
+                <Col md="12">
+                    <Card style={{borderRadius:"10px"}}>
+                        <CardBody>
+                            <h3 className="text-main">{pkg?.name} Packages</h3>
+                            <p>Trip to Australia from India
+                                Are you planning a trip to Australia? If that’s the case, Pickyourtrail has the best deals on Australia tour packages that you should not miss. Whether you are looking for an Australian honeymoon package or an Australia family tour package, we offer a variety of options that you can look into. Australia is home to entertainment, scenic views, and resplendent architecture. If you are thinking of visiting this dreamy place, Pickyourtrail has more than 40 Australia tour packages, each different and unique from the next in terms of budget, amenities, stays, etc. The most fascinating factor about Australia is the balance it has with wildlife. You get to witness some of the most exotic creations of nature in Australia. If you are still speculating whether or not to visit Australia, check out our fast-moving Australia itineraries, and you won’t regret it. </p>
+                        </CardBody>
+                    </Card>
+                </Col>
+            </Row>
+        </Container>
+        <ListingCard pkg={pkg}></ListingCard>
+        <DefaultFooter></DefaultFooter>
+
     </>
 }

@@ -17,6 +17,7 @@ const listings = [{
     destinations: "Nainital , Haridwar",
     inclusions: [{ name: "4 Hotels" }, { name: "Transfers" }],
     price: "55000"
+    
 }]
 
 

@@ -18,36 +18,17 @@ import IndexHeader from "components/Headers/IndexHeader.js";
 import DarkFooter from "components/Footers/DarkFooter.js";
 
 // sections for this page
-import Images from "./index-sections/Images.js";
-import BasicElements from "./index-sections/BasicElements.js";
-import Navbars from "./index-sections/Navbars.js";
-import Tabs from "./index-sections/Tabs.js";
-import Pagination from "./index-sections/Pagination.js";
-import Notifications from "./index-sections/Notifications.js";
-import Typography from "./index-sections/Typography.js";
-import Javascript from "./index-sections/Javascript.js";
-import Carousel from "./index-sections/Carousel.js";
-import NucleoIcons from "./index-sections/NucleoIcons.js";
-import CompleteExamples from "./index-sections/CompleteExamples.js";
-import SignUp from "./index-sections/SignUp.js";
-import Examples from "./index-sections/Examples.js";
-import Download from "./index-sections/Download.js";
-import TourSlider from "./index-sections/TourSlider.js";
+
 import Slider from "components/Slider/Slider.js";
-import Explor from "components/Explor/Explor.js";
-import Travellers from "components/Travellers/Travellers.js";
-import Fanbook from "components/Fanbook/Fanbook.js";
-import KrishFlyier from "components/Krisflayer/KrishFlyier.js";
-import Footer from "components/Footer/Footer.js";
-import Holiday from "components/Holiday/Holiday.js";
-import Press from "components/Press/Press.js";
-import DetailedView from "./DetailedView.js";
+import dream from "../assets/img/svg 1.png"
+import discover from "../assets/img/airplane 1.png"
+import destination from "../assets/img/suitcase 1.png"
+import Themes from "components/Themes";
 
 
 
 
-
-function Index() {
+function Home() {
   React.useEffect(() => {
     document.body.classList.add("index-page");
     document.body.classList.add("sidebar-collapse");
@@ -71,22 +52,44 @@ function Index() {
           <Container style={{ textAlign: "center", padding: "2em 0" }}>
             <Row style={{ paddingTop: "2em" }}>
               <Col md="12">
+                <h3 className="style-heading">Welcome to</h3>
                 <h1 className="title-main">Tripper <span>Hub</span></h1>
               </Col>
               <Col md="12">
                 <p className="text-main"><span>Tripperhub.com</span> agency based in New Delhi. Offering tailor-made tour packages of India at competitive prices. We organize various quality travel arrangements like escorted tours, incentive travel, and discounted hotel bookings in India. There are some parts of the world that, once visited, get into your heart and won’t go. For us, India is such a place... </p>
               </Col>
+
             </Row>
+            <Row style={{ paddingTop: "4em" }}>
 
+              <Col md="4">
+                <img width={200} src={dream} alt="" />
+                <h3 style={{ marginTop: "1em", fontWeight: "500", fontSize: "1.25rem" }}>Dream</h3>
 
+              </Col>
+              <Col md="4">
+                <img width={200} src={discover} alt="" />
+                <h3 style={{ marginTop: "1em", fontWeight: "500", fontSize: "1.25rem" }}>Discover</h3>
 
+              </Col>
+              <Col md="4">
+                <img width={200} src={destination} alt="" />
+                <h3 style={{ marginTop: "1em", fontWeight: "500", fontSize: "1.25rem" }}>Destination</h3>
+              </Col>
+
+            </Row>
           </Container>
           <Container>
-            <Slider tittle={"Trending"} clrtitle={" Destinations"}></Slider>
+            <Slider uptext={"Explore"} tittle={"Trending"} clrtitle={" Destinations"}></Slider>
           </Container>
           <Container>
-          <Slider tittle={"International"} clrtitle={" Destinations"}></Slider>
+            <Slider uptext={"Amazing"} tittle={"International"} clrtitle={" Tours"}></Slider>
           </Container>
+
+          <Themes></Themes>
+
+
+          <DarkFooter></DarkFooter>
 
         </div>
 
@@ -95,4 +98,4 @@ function Index() {
   );
 }
 
-export default Index;
+export default Home;

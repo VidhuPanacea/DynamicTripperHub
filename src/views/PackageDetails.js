@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom"
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 
-export default function DetailedView(props) {
+export default function PackageDetails(props) {
 
     const [pkg, setPkg] = useState({})
 

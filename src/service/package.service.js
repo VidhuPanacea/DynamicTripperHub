@@ -1,4 +1,4 @@
-const Packages = [{
+const internationalPackages = [{
     id: 10,
     name: "Nainital Tour Package",
     duration: "2 Nights - 3 Days",
@@ -95,4 +95,89 @@ const Packages = [{
 }]
 
 
-export default Packages
+
+const domesticPackages = [{}]
+
+
+const packages = [{
+    id: 1,
+    name: "Nainital Tour Package",
+    path: "nainital-tour-package",
+    destination: "Himachal Pradesh",
+    theme: "Family",
+    category: "Family",
+    coverImage: "",
+    description: "",
+    inclusions: [{ name: "Hotels" }, { name: "Transfers" }, { name: "Sightseeing" }],
+},
+{
+    id: 2,
+    name: "Shimla Manali Volvo",
+    path: "shimla-manali-volvo",
+    destination: "Himachal Pradesh",
+    theme: "Group",
+    category: "Hiking and Trekking",
+    coverImage: "",
+    description: "Volvo Tour at best Rates",
+    inclusions: [{ name: "Hotels" }, { name: "Transfers" }, { name: "Sightseeing" }],
+},
+{
+    id: 3,
+    name: "Rishikesh Rafting Tour",
+    path: "rishikesh-rafting-tour",
+    destination: "Uttarakhand",
+    theme: "Group",
+    category: "Adventure",
+    coverImage: "",
+    description: "Welcome to Rishikesh",
+    inclusions: [{ name: "Hotels" }, { name: "Transfers" }, { name: "Sightseeing" }],
+},
+{
+    id: 4,
+    name: "Neelkanth Yatra",
+    path: "neelkanth-yatra",
+    destination: "Uttarakhand",
+    theme: "Group",
+    category: "Trekking and Hiking",
+    coverImage: "",
+    description: "Jai Bholenath Ki",
+    inclusions: [{ name: "Hotels" }, { name: "Transfers" }, { name: "Sightseeing" }],
+},
+{
+    id: 5,
+    name: "Jaipur Prestige",
+    path: "jaipur-prestige",
+    destination: "Rajasthan",
+    theme: "Family",
+    category: "Sightseeing",
+    coverImage: "",
+    description: "Jaipur ajao Hawa Mahal Dekhlo",
+    inclusions: [{ name: "Hotels" }, { name: "Transfers" }, { name: "Sightseeing" }],
+},
+{
+    id: 6,
+    name: "Mumbai Meltdown",
+    path: "mumbai-meltdown",
+    destination: "Mumbai",
+    theme: "Group",
+    category: "Sightseeing",
+    coverImage: "",
+    description: "As the name suggests, the package is dope...",
+    inclusions: [{ name: "Hotels" }, { name: "Transfers" }, { name: "Sightseeing" }],
+},
+{
+    id: 7,
+    name: "Auli Skiing Tour",
+    path: "auli-skiing-tour",
+    destination: "Uttarakhand",
+    theme: "Group",
+    category: "Adventure",
+    coverImage: "",
+    description: "Auli ajao skiing karlo maje karo",
+    inclusions: [{ name: "Hotels" }, { name: "Transfers" }, { name: "Sightseeing" }],
+},
+
+
+]
+export { internationalPackages, domesticPackages, packages };
+
