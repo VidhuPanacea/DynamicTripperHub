@@ -50,6 +50,17 @@
     margin-bottom: 2em;
 
 }
+.cardtitle{
+    font-size: 1.5rem;
+    color: var(--csecondary);
+    font-weight: 600;
+}
+.cardtext{
+    font-size: 1rem;
+    color: grey;
+    font-weight: 400;
+    padding-right: 1.5em;
+}
 .underHeader{
     padding: 1.5em 0;
     display: flex;

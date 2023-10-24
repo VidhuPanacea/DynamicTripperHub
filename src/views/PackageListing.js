@@ -10,7 +10,6 @@ import {
     CardBody,
     Col
 } from "reactstrap";
-import { internationalPackages } from "service/package.service"
 import { useLocation } from "react-router-dom"
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
@@ -28,6 +27,7 @@ import IndexNavbar from "components/Navbars/IndexNavbar";
 import ListingHeader from "components/Headers/ListingHeader";
 import ListingCard from "components/ListingCard";
 import DefaultFooter from "components/Footers/DefaultFooter";
+import { packages } from "../service/package.service";
 
 export default function PackageListing(props) {
 
@@ -37,6 +37,7 @@ export default function PackageListing(props) {
     useEffect(() => {
         console.log(location?.state)
         setPkg(location?.state?.pkg)
+        window.scrollTo(0, 0);
 
     }, []);
 
@@ -50,7 +51,7 @@ export default function PackageListing(props) {
         <Container style={{ padding: "3em 0" }}>
             <Row >
                 <Col md="12">
-                    <Card style={{borderRadius:"10px"}}>
+                    <Card style={{ borderRadius: "10px" }}>
                         <CardBody>
                             <h3 className="text-main">{pkg?.name} Packages</h3>
                             <p>Trip to Australia from India
@@ -60,7 +61,10 @@ export default function PackageListing(props) {
                 </Col>
             </Row>
         </Container>
-        <ListingCard pkg={pkg}></ListingCard>
+        <Container>
+            {packages.map((packagee => (<ListingCard pkg={packagee}></ListingCard>)))}
+        </Container>
+
         <DefaultFooter></DefaultFooter>
 
     </>

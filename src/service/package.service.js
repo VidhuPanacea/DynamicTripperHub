@@ -1,103 +1,3 @@
-const internationalPackages = [{
-    id: 10,
-    name: "Nainital Tour Package",
-    duration: "2 Nights - 3 Days",
-    destinations: "Nainital",
-    category: "Family",
-    price: "On Request",
-    image: "https://images.unsplash.com/photo-1601622256416-d7f757f99eb2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
-    description: "",
-    suggested: [{}]
-}, {
-    id: 2,
-    name: "Nainital Ranikhet Tour",
-    duration: "4 Nights / 5 Days",
-    destinations: "Nainital, Ranikhet",
-    category: "Honeymoon",
-    price: "On Request",
-    image: "https://images.unsplash.com/photo-1608942025318-1191eeade556?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2055&q=80",
-    description: "",
-    suggested: [{}]
-},
-{
-    id: 3,
-    name: "Mussorie Rishikesh Tour",
-    duration: "3 Nights / 4 Days",
-    destinations: "Mussorie, Rishikesh",
-    category: "Adventure",
-    price: "On Request",
-    image: "https://images.unsplash.com/photo-1603867106100-0d2039fc8757?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2081&q=80",
-    description: "",
-    suggested: [{}]
-}, {
-    id: 4,
-    name: "Mussorie Honeymoon Tour",
-    duration: "4 Nights / 5 Days",
-    destinations: "Mussorie",
-    category: "Honeymoon",
-    price: "On Request",
-    image: "https://images.unsplash.com/photo-1490031781863-29b9bdbea131?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
-    description: "",
-    suggested: [{}]
-}, {
-    id: 5,
-    name: "Nainital Corbett Mussorie Tour",
-    duration: "4 Nights / 5 Days",
-    destinations: "Nainital, Corbett",
-    category: "Wildlife",
-    price: "On Request",
-    image: "https://images.unsplash.com/photo-1669021820355-7186908380d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    description: "",
-    suggested: [{}]
-}, {
-    id: 6,
-    name: "Haridwar and Rishikesh Tour",
-    duration: "2 Nights / 3 Days",
-    destinations: "Haridwar, Rishikesh",
-    category: "Adventure",
-    price: "On Request",
-    image: "https://images.unsplash.com/photo-1511754863001-18d44abd0a93?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    description: "",
-    suggested: [{}]
-}, {
-    id: 7,
-    name: "Delhi Landsdowne Weekend Tour",
-    duration: "2 Nights / 3 Days",
-    destinations: "Delhi, Lansdowne",
-    category: "Trekking & Hiking",
-    price: "On Request",
-    price: "On Request",
-    image: "https://images.unsplash.com/photo-1596712394419-8f30d4d12f70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1916&q=80",
-    description: "",
-    suggested: [{}]
-},
-{
-    id: 8,
-    name: "Auli Skiing Tour",
-    duration: "10 Nights / 11 Days",
-    destinations: "Auli",
-    category: "Adventure",
-    price: "On Request",
-    image: "https://images.unsplash.com/photo-1605540436563-5bca919ae766?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80",
-    description: "",
-    suggested: [{}]
-},
-{
-    id: 37,
-    name: "Delhi Corbett Weekend Tour",
-    duration: "2 Nights / 3 Days",
-    destinations: "Jim Corbette",
-    category: "Wildlife",
-    price: "On Request",
-    image: "https://images.unsplash.com/photo-1588970698009-f8ea62f1857e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
-    description: "",
-    suggested: [{}]
-}]
-
-
-
-const domesticPackages = [{}]
-
 
 const packages = [{
     id: 1,
@@ -106,8 +6,8 @@ const packages = [{
     destination: "Himachal Pradesh",
     theme: "Family",
     category: "Family",
-    coverImage: "",
-    description: "",
+    coverImage: "https://images.unsplash.com/photo-1601622256416-d7f757f99eb2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+    description: "Hello, welcome to Nainital",
     inclusions: [{ name: "Hotels" }, { name: "Transfers" }, { name: "Sightseeing" }],
 },
 {
@@ -117,7 +17,7 @@ const packages = [{
     destination: "Himachal Pradesh",
     theme: "Group",
     category: "Hiking and Trekking",
-    coverImage: "",
+    coverImage: "https://images.unsplash.com/photo-1588970698009-f8ea62f1857e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
     description: "Volvo Tour at best Rates",
     inclusions: [{ name: "Hotels" }, { name: "Transfers" }, { name: "Sightseeing" }],
 },
@@ -128,7 +28,7 @@ const packages = [{
     destination: "Uttarakhand",
     theme: "Group",
     category: "Adventure",
-    coverImage: "",
+    coverImage: "https://images.unsplash.com/photo-1588970698009-f8ea62f1857e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
     description: "Welcome to Rishikesh",
     inclusions: [{ name: "Hotels" }, { name: "Transfers" }, { name: "Sightseeing" }],
 },
@@ -139,7 +39,7 @@ const packages = [{
     destination: "Uttarakhand",
     theme: "Group",
     category: "Trekking and Hiking",
-    coverImage: "",
+    coverImage: "https://images.unsplash.com/photo-1588970698009-f8ea62f1857e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
     description: "Jai Bholenath Ki",
     inclusions: [{ name: "Hotels" }, { name: "Transfers" }, { name: "Sightseeing" }],
 },
@@ -150,7 +50,7 @@ const packages = [{
     destination: "Rajasthan",
     theme: "Family",
     category: "Sightseeing",
-    coverImage: "",
+    coverImage: "https://images.unsplash.com/photo-1588970698009-f8ea62f1857e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
     description: "Jaipur ajao Hawa Mahal Dekhlo",
     inclusions: [{ name: "Hotels" }, { name: "Transfers" }, { name: "Sightseeing" }],
 },
@@ -161,7 +61,7 @@ const packages = [{
     destination: "Mumbai",
     theme: "Group",
     category: "Sightseeing",
-    coverImage: "",
+    coverImage: "https://images.unsplash.com/photo-1588970698009-f8ea62f1857e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
     description: "As the name suggests, the package is dope...",
     inclusions: [{ name: "Hotels" }, { name: "Transfers" }, { name: "Sightseeing" }],
 },
@@ -172,12 +72,88 @@ const packages = [{
     destination: "Uttarakhand",
     theme: "Group",
     category: "Adventure",
-    coverImage: "",
+    coverImage: "https://images.unsplash.com/photo-1605540436563-5bca919ae766?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80",
     description: "Auli ajao skiing karlo maje karo",
     inclusions: [{ name: "Hotels" }, { name: "Transfers" }, { name: "Sightseeing" }],
 },
-
-
 ]
-export { internationalPackages, domesticPackages, packages };
+
+const domestic = [
+    {
+        id: 1,
+        name: "Himachal Pradesh",
+        path:"himachal-pradesh",
+        coverImage: "https://images.unsplash.com/photo-1618059551593-e97cfbb42e8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    },
+    {
+        id: 2,
+        name: "Uttarakhand",
+        path:"uttarkahnd",
+        coverImage: "https://images.unsplash.com/photo-1547378809-db8f9515a63b?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        id: 3,
+        name: "Rajasthan",
+        path: "rajasthan",
+        coverImage: "https://images.unsplash.com/photo-1631867675167-90a456a90863?auto=format&fit=crop&q=80&w=2079&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        id: 4,
+        name: "Mumbai",
+        path: "mumbai",
+        coverImage: "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        id: 5,
+        name: "North East",
+        path: "north-east",
+        coverImage: "https://images.unsplash.com/photo-1455157823797-3019317cbcf0?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        id: 6,
+        name: "Jammu-Kashmir",
+        path: "jammu-kashmir",
+        coverImage: "https://images.unsplash.com/photo-1566837497312-7be7830ae9b1?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+]
+
+const international = [
+    {
+        id: 1,
+        name: "Zurich",
+        path:"zurich",
+        coverImage: "https://images.unsplash.com/photo-1620562423895-ad4924643d43?auto=format&fit=crop&q=80&w=1932&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+        id: 2,
+        name: "Malaysia",
+        path:"malaysia",
+        coverImage: "https://images.unsplash.com/photo-1564506414752-a73fbe0c6b00?auto=format&fit=crop&q=80&w=1932&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        id: 3,
+        name: "Indonesia",
+        path:"indonesia",
+        coverImage: "https://images.unsplash.com/photo-1513415756790-2ac1db1297d0?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        id: 4,
+        name: "Thailand",
+        path:"thailand",
+        coverImage: "https://images.unsplash.com/photo-1490077476659-095159692ab5?auto=format&fit=crop&q=80&w=2051&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        id: 5,
+        name: "Dubai",
+        path:"dubai",
+        coverImage: "https://images.unsplash.com/flagged/photo-1559717201-fbb671ff56b7?auto=format&fit=crop&q=80&w=2071&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        id: 6,
+        name: "Singapore",
+        path:"singapore",
+        coverImage: "https://images.unsplash.com/photo-1565967511849-76a60a516170?auto=format&fit=crop&q=80&w=2071&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+]
+export { packages,domestic, international };
 

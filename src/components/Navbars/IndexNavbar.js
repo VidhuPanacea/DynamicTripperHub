@@ -89,15 +89,14 @@ function IndexNavbar() {
                     <DropdownToggle
                       caret
                       color="default"
-                      href="#pablo"
                       nav
                       onClick={(e) => e.preventDefault()}
                     >
-                      <p>{menu.name}</p>
+                      <p >{menu.name}</p>
                     </DropdownToggle>
 
                     <DropdownMenu>
-                      {menu.subMenu.map((sm) => (<DropdownItem tag={Link}>
+                      {menu.subMenu.map((sm) => (<DropdownItem tag={Link} to={`/packages/${sm.name}`}>
                         {sm.name}
                       </DropdownItem>))}
                     </DropdownMenu>
@@ -105,7 +104,7 @@ function IndexNavbar() {
                 }
                 else {
                   return <NavItem>
-                    <NavLink href="#">
+                    <NavLink tag={Link} to={`/${menu.name}`}>
                       <p>{menu.name}</p>
                     </NavLink>
                   </NavItem>

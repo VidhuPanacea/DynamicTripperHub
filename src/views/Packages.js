@@ -12,12 +12,13 @@ import Slider from "components/Slider/Slider";
 import { useState, useEffect } from "react";
 import ProfilePageHeader from "components/Headers/ProfilePageHeader";
 import IndexNavbar from "components/Navbars/IndexNavbar";
-import { internationalPackages } from "service/package.service";
+import { packages } from "service/package.service";
 
 export default function Packages() {
     const [pkg, setPkg] = useState([])
     useEffect(() => {
-        setPkg(internationalPackages)
+        setPkg(packages)
+        window.scrollTo(0, 0);
     })
 
 
@@ -28,16 +29,16 @@ export default function Packages() {
             <ProfilePageHeader pkg={pkg[0]} />
 
             <Container>
-                <Slider uptext={"Explore"} tittle={"Malaysia"} ></Slider>
+                <Slider data={pkg} uptext={"Explore"} tittle={"Malaysia"} ></Slider>
             </Container>
             <Container>
-                <Slider uptext={"Visit"} tittle={"Thailand"} ></Slider>
+                <Slider data={[]} uptext={"Visit"} tittle={"Thailand"} ></Slider>
             </Container>
             <Container>
-                <Slider uptext={"Discover"} tittle={"Indonesia"} ></Slider>
+                <Slider data={[]} uptext={"Discover"} tittle={"Indonesia"} ></Slider>
             </Container>
             <Container>
-                <Slider uptext={"Discover"} tittle={"Indonesia"} ></Slider>
+                <Slider data={[]} uptext={"Discover"} tittle={"Indonesia"} ></Slider>
             </Container>
 
 

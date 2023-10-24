@@ -24,6 +24,7 @@ import dream from "../assets/img/svg 1.png"
 import discover from "../assets/img/airplane 1.png"
 import destination from "../assets/img/suitcase 1.png"
 import Themes from "components/Themes";
+import { packages, destinations, international, domestic } from "../service/package.service";
 
 
 
@@ -80,13 +81,13 @@ function Home() {
             </Row>
           </Container>
           <Container>
-            <Slider uptext={"Explore"} tittle={"Trending"} clrtitle={" Destinations"}></Slider>
+            <Slider data={domestic} uptext={"Explore"} tittle={"Trending"} clrtitle={" Destinations"}></Slider>
           </Container>
           <Container>
-            <Slider uptext={"Amazing"} tittle={"International"} clrtitle={" Tours"}></Slider>
+            <Slider data={international} uptext={"Amazing"} tittle={"International"} clrtitle={" Tours"}></Slider>
           </Container>
 
-          <Themes></Themes>
+          <Themes />
 
 
           <DarkFooter></DarkFooter>

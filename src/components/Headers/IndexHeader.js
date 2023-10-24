@@ -18,8 +18,12 @@ import {
   Row,
   FormGroup
 } from "reactstrap";
-
+import { Swiper, SwiperSlide } from 'swiper/react';
 // core components
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 function IndexHeader() {
   let pageHeader = React.createRef();
@@ -80,10 +84,39 @@ function IndexHeader() {
         <div
           className="page-header-image"
           style={{
-            backgroundImage: "url(" + require("assets/img/grzegorz-janysek-ZK4LMFctKS4-unsplash.jpg") + ")"
+            backgroundImage: "url()"
           }}
           ref={pageHeader}
-        ></div>
+        >
+          <Swiper id="headswipe"
+            spaceBetween={0}
+            centeredSlides={true}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+
+            modules={[Autoplay]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <img src="https://images.unsplash.com/photo-1566837497312-7be7830ae9b1?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://images.unsplash.com/flagged/photo-1559717201-fbb671ff56b7?auto=format&fit=crop&q=80&w=2071&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://images.unsplash.com/photo-1620562423895-ad4924643d43?auto=format&fit=crop&q=80&w=1932&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://images.unsplash.com/photo-1505662695181-d4b60363d2a3?auto=format&fit=crop&q=80&w=2026&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+            </SwiperSlide>
+            
+          </Swiper>
+        </div>
         <Container>
           <Col className="ml-auto mr-auto" md="12">
             <h1 className="title" style={{ marginTop: "4em" }}> Find the Perfect Holidays</h1>
@@ -159,9 +192,26 @@ function IndexHeader() {
             </Card>
           </Col>
         </Container>
+        <Container>
+
+        </Container>
       </div>
     </>
   );
 }
 
 export default IndexHeader;
+
+
+
+// Import Swiper React components
+
+// Import Swiper styles
+
+
+
+
+// import required modules
+
+
+

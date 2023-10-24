@@ -19,6 +19,7 @@ import Blogs from "views/Blogs";
 import DetailedBlog from "views/DetailedBlog";
 import About from "views/About";
 import Contact from "views/Contact";
+import NucleoIcons from "views/NucleoIcons";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -32,9 +33,9 @@ root.render(
       <Route path="/packages/:destination/:packageName" element={<PackageDetails />} />
       <Route path="/blogs" element={<Blogs />} />
       <Route path="/blogs/:blogName" element={<DetailedBlog />} />
-      <Route path="/about-us" element={<About />} />
-      <Route path="/contact-us" element={<Contact />} />
-      <Route path="*" element={<Navigate to="/home" replace />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   </BrowserRouter>
 );

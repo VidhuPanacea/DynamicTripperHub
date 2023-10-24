@@ -3,7 +3,9 @@
     margin-top: 5em;
    
   }
-  
+  #headswipe .swiper-wrapper{
+    padding-top: 0;
+  }
  
   .swiper-wrapper{
     height: 100%;

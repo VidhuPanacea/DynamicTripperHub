@@ -36,7 +36,12 @@ const menu = [
     },
     {
         id: 5,
-        name: "About Us",
+        name: "About",
+        subMenu: []
+    },
+    {
+        id: 6,
+        name: "Contact",
         subMenu: []
     }
 ]

@@ -20,7 +20,7 @@ function DarkFooter() {
             </li>
             <li>
               <Link
-                to="/about-us"
+                to="/about"
               >
                 About Us
               </Link>

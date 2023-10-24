@@ -6,6 +6,8 @@ import {
     TabContent,
     TabPane,
     Container,
+    Card,
+    CardBody,
     Row,
     Col,
     UncontrolledTooltip
@@ -14,26 +16,37 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 export default function ListingCard(props) {
-
+    console.log(props.pkg)
 
     return (
-        <Container>
-            <Link state={{ pkg: props.pkg }} to={`/packages/:destination/${props?.pkg?.name}`}>
-                <Row className="listcard-container">
-                    <Col md="3" style={{ paddingLeft: "0" }}>
-                        <img style={{height:"100%",borderTopLeftRadius:"10px",borderBottomLeftRadius:"10px"}} src={props?.pkg?.coverimage} alt={""} />
-                    </Col>
-                    <Col md="6" style={{ padding: "1em" }}>
-                        <h3>{props.pkg.name}</h3>
-                        <p>{props.pkg.description}</p>
-                    </Col>
-                    <Col style={{ padding: "1em 1em", display: "flex", flexDirection: "column", justifyContent: "space-between" }} md="3">
-                        {/* {props.pkg.inclusions.map(incl => (<p>{incl.name}</p>))} */}
-                        <button  className="view-package-btn">View Package</button>
-                    </Col>
-                </Row>
-            </Link>
+        <Link to={`/packages/${props.pkg?.destination}/${props.pkg?.path}`} state={{ pkg: props.pkg }}>
+            <Row>
+                <Col md="12">
+                    <Card style={{ borderRadius: "10px" }}>
+                        <CardBody>
+                            <Row>
+                                <Col md="4">
+                                    <img style={{ borderRadius: "5px" }} src={props.pkg?.coverImage} alt="" />
+                                </Col>
+                                <Col md="5">
+                                    <Row>
+                                        <h1 className="cardtitle">{props.pkg?.name}</h1>
+                                    </Row>
+                                    <Row>
+                                        <p className="cardtext">
+                                            {props.pkg?.description}
+                                        </p>
+                                    </Row>
+                                </Col>
+                                <Col md="3" style={{ textAlign: "center" }}>
+                                    <button style={{ width: "80%", }} className="primarybtn">View Package</button>
+                                </Col>
+                            </Row>
+                        </CardBody>
 
-        </Container>
+                    </Card>
+                </Col>
+            </Row>
+        </Link>
     )
 }
