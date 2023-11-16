@@ -86,9 +86,17 @@ function Home() {
           <Container>
             <Slider data={international} uptext={"Amazing"} tittle={"International"} clrtitle={" Tours"}></Slider>
           </Container>
+          <Container>
+            <Slider data={international} uptext={"Amazing"} tittle={"International"} clrtitle={" Tours"}></Slider>
+          </Container>
 
           <Themes />
 
+          <Container>
+            <Slider data={international} uptext={"Amazing"} tittle={"International"} clrtitle={" Tours"}></Slider>
+          </Container> <Container>
+            <Slider data={international} uptext={"Amazing"} tittle={"International"} clrtitle={" Tours"}></Slider>
+          </Container>
 
           <DarkFooter></DarkFooter>
 

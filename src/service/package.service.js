@@ -83,7 +83,7 @@ const domestic = [
         id: 1,
         name: "Himachal Pradesh",
         path:"himachal-pradesh",
-        coverImage: "https://images.unsplash.com/photo-1618059551593-e97cfbb42e8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        coverImage: "https://media.giphy.com/media/orUC71iuzC3rtVWyPn/giphy.gif",
     },
     {
         id: 2,

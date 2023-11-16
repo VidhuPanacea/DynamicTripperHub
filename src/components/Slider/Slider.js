@@ -12,7 +12,7 @@ import first from '../../assets/img/Group 107.png'
 import { Link } from 'react-router-dom';
 
 
-const Slider = ({ uptext,tittle, clrtitle,data }) => {
+const Slider = ({ uptext, tittle, clrtitle, data }) => {
   const images = [
     { image: require("../../assets/img/Group 107.png") }
   ];
@@ -34,7 +34,14 @@ const Slider = ({ uptext,tittle, clrtitle,data }) => {
           slidesPerView={5}
         >
           <SwiperNewButton />
-          {data.map(pkg => (<SwiperSlide ><Card pkg={pkg} img={pkg.coverImage} tittle={pkg.name} />  </SwiperSlide>))}
+          {/* {data.map(pkg => (<SwiperSlide ><Card pkg={pkg} img={pkg.coverImage} tittle={pkg.name} />  </SwiperSlide>))} */}
+
+          {data.map((pkg) => {
+
+          
+            return <SwiperSlide ><Card pkg={pkg} img={pkg.coverImage} tittle={pkg.name} />  </SwiperSlide>;
+
+          })}
         </Swiper>
 
       </div>
