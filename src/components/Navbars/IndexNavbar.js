@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // reactstrap components
 import {
@@ -16,13 +16,21 @@ import {
   Container,
   UncontrolledTooltip,
 } from "reactstrap";
-import menu from "service/navigation.service";
+
 import logo from "../../assets/img/tripperHubpng 1.png"
+import NavigationService from "service/navigation.service";
+
+
 
 function IndexNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
+  const [menu, setMenu] = useState([])
   React.useEffect(() => {
+    NavigationService.GetNavMenu()
+      .then(res => {
+        setMenu(res)
+      })
     const updateNavbarColor = () => {
       if (
         document.documentElement.scrollTop > 399 ||
@@ -40,7 +48,10 @@ function IndexNavbar() {
     return function cleanup() {
       window.removeEventListener("scroll", updateNavbarColor);
     };
-  });
+
+
+  }, []);
+
   return (
     <>
       {collapseOpen ? (
@@ -83,8 +94,13 @@ function IndexNavbar() {
 
 
             <Nav navbar>
-              {menu.map((menu) => {
-                if (menu.subMenu.length > 0) {
+
+              {menu.filter((m) => m.parentId == 0).map((m) => {
+                console.log(menu)
+                console.log(m.id)
+                console.log("abcd" + menu.filter((m1) => m1.parentId == m.id))
+                if (menu.filter((m1) => m1.parentId == m.id).length > 0) {
+
                   return <UncontrolledDropdown nav>
                     <DropdownToggle
                       caret
@@ -92,11 +108,11 @@ function IndexNavbar() {
                       nav
                       onClick={(e) => e.preventDefault()}
                     >
-                      <p >{menu.name}</p>
+                      <p >{m.name}</p>
                     </DropdownToggle>
 
                     <DropdownMenu>
-                      {menu.subMenu.map((sm) => (<DropdownItem tag={Link} to={`/packages/${sm.name}`}>
+                      {menu.filter((m1) => m1.parentId == m.id)?.map((sm) => (<DropdownItem tag={Link} to={`/packages/${sm.name}`}>
                         {sm.name}
                       </DropdownItem>))}
                     </DropdownMenu>
@@ -104,8 +120,8 @@ function IndexNavbar() {
                 }
                 else {
                   return <NavItem>
-                    <NavLink tag={Link} to={`/${menu.name}`}>
-                      <p>{menu.name}</p>
+                    <NavLink tag={Link} to={`/${m.name}`}>
+                      <p>{m.name}</p>
                     </NavLink>
                   </NavItem>
                 }

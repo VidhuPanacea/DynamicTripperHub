@@ -5,6 +5,7 @@
   "dependencies": {
     "@flaticon/flaticon-uicons": "^3.0.0",
     "@react-icons/all-files": "^4.1.0",
+    "axios": "^1.6.2",
     "get-google-fonts": "^1.2.2",
     "google-fonts": "^1.0.0",
     "moment": "2.29.4",
