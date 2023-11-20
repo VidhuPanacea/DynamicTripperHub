@@ -1,5 +1,4 @@
 import React from "react";
-
 // reactstrap components
 import {
   Button,
@@ -11,23 +10,17 @@ import {
   Row,
   Col
 } from "reactstrap";
-
 // core components
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import IndexHeader from "components/Headers/IndexHeader.js";
 import DarkFooter from "components/Footers/DarkFooter.js";
-
 // sections for this page
-
 import Slider from "components/Slider/Slider.js";
 import dream from "../assets/img/svg 1.png"
 import discover from "../assets/img/airplane 1.png"
 import destination from "../assets/img/suitcase 1.png"
 import Themes from "components/Themes";
 import { packages, destinations, international, domestic } from "../service/package.service";
-
-
-
 
 function Home() {
   React.useEffect(() => {
@@ -89,19 +82,14 @@ function Home() {
           <Container>
             <Slider data={international} uptext={"Amazing"} tittle={"International"} clrtitle={" Tours"}></Slider>
           </Container>
-
           <Themes />
-
           <Container>
             <Slider data={international} uptext={"Amazing"} tittle={"International"} clrtitle={" Tours"}></Slider>
           </Container> <Container>
             <Slider data={international} uptext={"Amazing"} tittle={"International"} clrtitle={" Tours"}></Slider>
           </Container>
-
           <DarkFooter></DarkFooter>
-
         </div>
-
       </div>
     </>
   );
