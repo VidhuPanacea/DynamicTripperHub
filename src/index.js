@@ -30,10 +30,10 @@ root.render(
       <Route path="/" element={<Home />} />
       <Route path="/packages" element={<Packages/>} />  
       <Route path="/packages/:destination" element={<PackageListing />} />
-      <Route path="/packages/:destination/:packageName" element={<PackageDetails />} />
-      <Route path="/blogs" element={<Blogs />} />
+      <Route path="/packages/:destination/:packageName" element={<PackageDetails/>} />
+      <Route path="/blog" element={<Blogs />} />
       <Route path="/blogs/:blogName" element={<DetailedBlog />} />
-      <Route path="/about" element={<About />} />
+      <Route path="/about us" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

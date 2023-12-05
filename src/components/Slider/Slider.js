@@ -31,7 +31,21 @@ const Slider = ({ uptext, tittle, clrtitle, data }) => {
         <Swiper
           modules={[Navigation, Pagination, A11y]}
           spaceBetween={15}
-          slidesPerView={5}
+          slidesPerView={1}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 15,
+            },
+            1024: {
+              slidesPerView: 5,
+              spaceBetween: 15,
+            },
+          }}
         >
           <SwiperNewButton />
           {/* {data.map(pkg => (<SwiperSlide ><Card pkg={pkg} img={pkg.coverImage} tittle={pkg.name} />  </SwiperSlide>))} */}
@@ -39,7 +53,7 @@ const Slider = ({ uptext, tittle, clrtitle, data }) => {
           {data.map((pkg) => {
 
           
-            return <SwiperSlide ><Card pkg={pkg} img={pkg.coverImage} tittle={pkg.name} />  </SwiperSlide>;
+            return <SwiperSlide ><Card pkg={pkg} img={pkg.photo} tittle={pkg.name} />  </SwiperSlide>;
 
           })}
         </Swiper>

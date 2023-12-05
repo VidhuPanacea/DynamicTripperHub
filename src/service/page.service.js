@@ -8,18 +8,18 @@ const client = axios.create({
 });
 
 
-async function GetPackages() {
-    const response = await client.get(`Package/GetPackage`);
+async function GetPages() {
+    const response = await client.get(`Page/GetPage`);
     return response.data;
 }
 
 
-const PackageService = {
-    GetPackages
+const PageService = {
+    GetPages
 }
 
 
-export default PackageService;
+export default PageService;
 
 
 

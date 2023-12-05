@@ -26,11 +26,20 @@ function IndexNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
   const [menu, setMenu] = useState([])
+  const [domestic, setDomestic] = useState([])
+  const [international, setInternational] = useState([])
+
   React.useEffect(() => {
     NavigationService.GetNavMenu()
       .then(res => {
         setMenu(res)
       })
+
+    // DestinationService.GetDestinations()
+    //   .then(res => {
+    //     setDomestic(res.filter(res => res.type == "Domestic"))
+    //     setInternational(res.filter(res => res.type == "International"))
+    //   })
     const updateNavbarColor = () => {
       if (
         document.documentElement.scrollTop > 399 ||
@@ -70,7 +79,7 @@ function IndexNavbar() {
               href="/"
               id="navbar-brand"
             >
-              <img width="250px" src={logo} alt="" />
+              <img width="220px" src={logo} alt="" />
             </NavbarBrand>
             <button
               className="navbar-toggler navbar-toggler"
@@ -96,9 +105,6 @@ function IndexNavbar() {
             <Nav navbar>
 
               {menu.filter((m) => m.parentId == 0).map((m) => {
-                console.log(menu)
-                console.log(m.id)
-                console.log("abcd" + menu.filter((m1) => m1.parentId == m.id))
                 if (menu.filter((m1) => m1.parentId == m.id).length > 0) {
 
                   return <UncontrolledDropdown nav>

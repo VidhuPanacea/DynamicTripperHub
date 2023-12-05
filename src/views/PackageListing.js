@@ -27,43 +27,64 @@ import IndexNavbar from "components/Navbars/IndexNavbar";
 import ListingHeader from "components/Headers/ListingHeader";
 import ListingCard from "components/ListingCard";
 import DefaultFooter from "components/Footers/DefaultFooter";
-import { packages } from "../service/package.service";
+import PackageService from "service/package.service";
+import DestinationService from "service/destination.service";
 
 export default function PackageListing(props) {
-
+    const [packages, setPackages] = useState([])
     const [pkg, setPkg] = useState([])
-
+    const [destination, setDestination] = useState([])
+    
     const location = useLocation()
+    const dest = location.pathname.replace('/packages/', '');
     useEffect(() => {
+
+        PackageService.GetPackages()
+            .then(res => {
+                setPackages(res)
+            })
+        // DestinationService.GetDestinations().then(res => {
+        //     setDestination(res)
+        // })
+        DestinationService.GetDestinationByName(dest).then(res => {
+            setDestination(res)
+        })
+
         console.log(location?.state)
+        console.log(location?.pathname)
         setPkg(location?.state?.pkg)
         window.scrollTo(0, 0);
 
-    }, []);
+    }, [location?.pathname]);
+
 
 
     return <>
         <IndexNavbar></IndexNavbar>
         <div className="wrapper">
-            <ListingHeader data={pkg} />
+            <ListingHeader data={destination} />
 
         </div>
         <Container style={{ padding: "3em 0" }}>
             <Row >
-                <Col md="12">
+                <Col md="12" sm="4">
                     <Card style={{ borderRadius: "10px" }}>
                         <CardBody>
-                            <h3 className="text-main">{pkg?.name} Packages</h3>
-                            <p>Trip to Australia from India
-                                Are you planning a trip to Australia? If that’s the case, Pickyourtrail has the best deals on Australia tour packages that you should not miss. Whether you are looking for an Australian honeymoon package or an Australia family tour package, we offer a variety of options that you can look into. Australia is home to entertainment, scenic views, and resplendent architecture. If you are thinking of visiting this dreamy place, Pickyourtrail has more than 40 Australia tour packages, each different and unique from the next in terms of budget, amenities, stays, etc. The most fascinating factor about Australia is the balance it has with wildlife. You get to witness some of the most exotic creations of nature in Australia. If you are still speculating whether or not to visit Australia, check out our fast-moving Australia itineraries, and you won’t regret it. </p>
+                            <h3 className="text-main">{destination?.name} Packages</h3>
+                            <p>{destination?.description}</p>
                         </CardBody>
                     </Card>
                 </Col>
             </Row>
         </Container>
         <Container>
-            {packages.map((packagee => (<ListingCard pkg={packagee}></ListingCard>)))}
+            {console.log(packages)}
+            {console.log(location.pathname.replace('/packages/', ''))}
+            {console.log(packages.filter((d => d.destination == location.pathname.replace('/packages/', ''))))}
+            {packages.filter((d => d.destination.toLowerCase() == location.pathname.replace('/packages/', '').toLowerCase())).map((packagee => (<ListingCard pkg={packagee}></ListingCard>)))}
         </Container>
+
+        
 
         <DefaultFooter></DefaultFooter>
 

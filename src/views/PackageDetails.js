@@ -44,7 +44,7 @@ export default function PackageDetails(props) {
                 <div
                     className="page-header-image"
                     style={{
-                        backgroundImage: `url(${pkg.coverImage})`
+                        backgroundImage: `url(${pkg.photo})`
                     }}
                     ref={pageHeader}
                 ></div>
