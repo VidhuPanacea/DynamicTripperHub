@@ -31,6 +31,7 @@ import Calltoaction from "components/Calltoaction";
 
 function Home() {
   const [domestic, setDomestic] = useState([])
+  // const [pilgrimage, setPilgrimage] = useState([])
   const [international, setInternational] = useState([])
   const [getaway, setGetaway] = useState([])
 
@@ -38,9 +39,10 @@ function Home() {
   React.useEffect(() => {
     DestinationService.GetDestinations()
       .then(res => {
-        setDomestic(res.filter(res => res.type == "Domestic"))
-        setInternational(res.filter(res => res.type == "International"))
-        setGetaway(res.filter(res => res.categoryId == 1))
+        setDomestic(res?.filter(res => res.type == "Domestic"))
+        setInternational(res?.filter(res => res.type == "International"))
+        setGetaway(res?.filter(res => res.categoryId == 1))
+        // setGetaway(res?.filter(res => res.categoryId == 1))
       })
 
 
@@ -62,6 +64,14 @@ function Home() {
       <div className="wrapper">
         <IndexHeader />
         <div className="main">
+
+
+          {/* Pilgrimage Section */}
+          <Container>
+            <Slider data={domestic} uptext={"Visit the"} tittle={"Divine"} clrtitle={" Pilgrimages"}></Slider>
+          </Container>
+
+
           {/* About Us */}
           <Container style={{ textAlign: "center", padding: "2em 0" }}>
             <Row style={{ paddingTop: "2em" }}>

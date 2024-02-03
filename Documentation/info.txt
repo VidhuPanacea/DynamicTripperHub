@@ -1,0 +1,49 @@
+
+Admin API
+http://103.50.213.106:9002/tripperhub-api/swagger/index.html
+
+Get Destination Response & Parameters
+ {
+    "id": 0,
+    "name": "string",
+    "categoryId": 0,
+    "category": "string",
+    "themeId": 0,
+    "theme": "string",
+    "title": "string",
+    "description": "string",
+    "photo": "string",
+    "duration": "string",
+    "destination": "string",
+    "destinationType": "string",
+    "itinerary": "string",
+    "rating": 0,
+    "price": 0,
+    "sortOrder": 0,
+    "isDeleted": true
+  }
+
+
+Get package Response and Parameters
+  {
+    "id": 1,
+    "name": "Mussorie Rishikesh Tour",
+    "categoryId": 5,
+    "category": "sadsd",
+    "themeId": 3,
+    "theme": "New Theam 111",
+    "title": "Group",
+    "description": "An unforgettable experience as you go beyond the fountains and Hills of the Queen of Hills. George Everest and other beautiful peeks await you for a treat to your heart ",
+    "photo": "https://images.unsplash.com/photo-1701364406051-156d47df2477?dpr=1&h=280&w=280&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzAzNDczMjUzfA&ixlib=rb-4.0.3",
+    "duration": "3 Nights/ 4 Days",
+    "destination": "Uttarakhand",
+    "destinationType": null,
+    "itinerary": "string",
+    "rating": 0,
+    "price": 5999,
+    "sortOrder": 0,
+    "isDeleted": false
+  }
+
+
+

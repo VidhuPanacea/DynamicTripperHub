@@ -34,7 +34,8 @@ export default function PackageListing(props) {
     const [packages, setPackages] = useState([])
     const [pkg, setPkg] = useState([])
     const [destination, setDestination] = useState([])
-    
+    const [listPkg, setListPkg] = useState([])
+
     const location = useLocation()
     const dest = location.pathname.replace('/packages/', '');
     useEffect(() => {
@@ -50,8 +51,6 @@ export default function PackageListing(props) {
             setDestination(res)
         })
 
-        console.log(location?.state)
-        console.log(location?.pathname)
         setPkg(location?.state?.pkg)
         window.scrollTo(0, 0);
 
@@ -79,12 +78,18 @@ export default function PackageListing(props) {
         </Container>
         <Container>
             {console.log(packages)}
-            {console.log(location.pathname.replace('/packages/', ''))}
-            {console.log(packages.filter((d => d.destination == location.pathname.replace('/packages/', ''))))}
-            {packages.filter((d => d.destination.toLowerCase() == location.pathname.replace('/packages/', '').toLowerCase())).map((packagee => (<ListingCard pkg={packagee}></ListingCard>)))}
+            {console.log(location?.pathname?.replace('/packages/', '').toLowerCase())}
+            { }
+            {/* {packages?.filter((d => d.destination.toLowerCase() 
+            == location.pathname.replace('/packages/', '').toLowerCase()))
+                // .map((packagee => (<ListingCard pkg={packagee}></ListingCard>)))
+            } */}
+            {
+                (packages?.filter((d => d.destination == location.pathname.replace('/packages/', '')))).map((packagee) => (<ListingCard pkg={packagee}></ListingCard>))
+            }
         </Container>
 
-        
+
 
         <DefaultFooter></DefaultFooter>
 

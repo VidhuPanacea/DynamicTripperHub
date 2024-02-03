@@ -24,12 +24,22 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import TextTransition, { presets } from 'react-text-transition';
 
 function IndexHeader() {
   let pageHeader = React.createRef();
   const [leftFocus, setLeftFocus] = React.useState(false);
   const [rightFocus, setRightFocus] = React.useState(false);
+  const TEXTS = ['Domestic', 'International', 'Pilgrimage', 'Theme Based'];
+
+  const [index, setIndex] = React.useState(0);
+
   React.useEffect(() => {
+    const intervalId = setInterval(
+      () => setIndex((index) => index + 1),
+      5050, // every 3 seconds
+    );
+    return () => clearTimeout(intervalId)
     if (window.innerWidth > 991) {
       const updateScroll = () => {
         let windowScrollTop = window.pageYOffset / 3;
@@ -41,6 +51,7 @@ function IndexHeader() {
         window.removeEventListener("scroll", updateScroll);
       };
     }
+    ;
   });
   const [formData, setFormData] = React.useState({
     name: "", phone: "", email: "", destination: ""
@@ -76,7 +87,6 @@ function IndexHeader() {
       }).catch(error => console.error('Error:', error));
   }
 
-
   return (
     <>
       <div className="page-header clear-filter " filter-color="">
@@ -92,7 +102,7 @@ function IndexHeader() {
             spaceBetween={0}
             centeredSlides={true}
             autoplay={{
-              delay: 5000,
+              delay: 4950,
               disableOnInteraction: false,
             }}
             pagination={{
@@ -103,7 +113,8 @@ function IndexHeader() {
             className="mySwiper"
           >
             <SwiperSlide>
-              <img src="https://images.unsplash.com/photo-1566837497312-7be7830ae9b1?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+              <img src="https://images.unsplash.com/photo-1601821139990-9fc929db79ce?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+
             </SwiperSlide>
             <SwiperSlide>
               <img src="https://images.unsplash.com/flagged/photo-1559717201-fbb671ff56b7?auto=format&fit=crop&q=80&w=2071&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
@@ -114,13 +125,19 @@ function IndexHeader() {
             <SwiperSlide>
               <img src="https://images.unsplash.com/photo-1505662695181-d4b60363d2a3?auto=format&fit=crop&q=80&w=2026&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
             </SwiperSlide>
-            
+
           </Swiper>
         </div>
         <Container>
           <Col className="ml-auto mr-auto" md="12">
-            <h1 className="title" style={{ marginTop: "4em" }}> Find the Perfect Holidays</h1>
-            <h3 >Cost Friendly Packages on your way...</h3>
+            <div style={{ display: "grid", placeItems: "center" }}>
+              <h1>
+                <TextTransition className="title" springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
+              </h1>
+              <h3 style={{marginTop:"2em", fontSize:"2rem"}}>
+                <TextTransition>Packages on your way...</TextTransition>
+              </h3>
+            </div>
             <Card className="card mt-5 pt-4 pb-3 pl-5 pr-5" style={{ backgroundColor: "rgb(600,600,600,.5)", borderRadius: "20px" }}>
               <CardHeader>
                 <Form onSubmit={submitHandler}>

@@ -10,6 +10,7 @@ const client = axios.create({
 
 async function GetDestinations() {
     const response = await client.get(`Destination/GetDestination`);
+    console.log(response.data)
     return response.data;
 }
 async function GetDestinationByName(name) {

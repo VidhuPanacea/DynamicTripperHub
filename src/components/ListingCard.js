@@ -26,7 +26,7 @@ export default function ListingCard(props) {
                         <CardBody>
                             <Row>
                                 <Col md="4">
-                                    <img style={{ borderRadius: "5px", height: "100%" }} src={props.pkg?.photo} alt="" />
+                                    <img style={{ borderRadius: "5px", height: "100%" }} src={props.pkg?.photo} alt="photo" />
                                 </Col>
                                 <Col style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }} md="8">
 

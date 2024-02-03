@@ -19,6 +19,7 @@ import {
 
 import logo from "../../assets/img/tripperHubpng 1.png"
 import NavigationService from "service/navigation.service";
+import DataService from "service/data.service";
 
 
 
@@ -30,9 +31,17 @@ function IndexNavbar() {
   const [international, setInternational] = useState([])
 
   React.useEffect(() => {
-    NavigationService.GetNavMenu()
+    // NavigationService.GetNavMenu()
+    //   .then(res => {
+    //     // alert(res)
+    //     setMenu(res)
+    //     console.log(res)
+    //   })
+    DataService.GetNavigation()
       .then(res => {
+        // alert(res)
         setMenu(res)
+        console.log(res)
       })
 
     // DestinationService.GetDestinations()
@@ -57,10 +66,7 @@ function IndexNavbar() {
     return function cleanup() {
       window.removeEventListener("scroll", updateNavbarColor);
     };
-
-
   }, []);
-
   return (
     <>
       {collapseOpen ? (
@@ -100,12 +106,10 @@ function IndexNavbar() {
             isOpen={collapseOpen}
             navbar
           >
-
-
             <Nav navbar>
 
-              {menu.filter((m) => m.parentId == 0).map((m) => {
-                if (menu.filter((m1) => m1.parentId == m.id).length > 0) {
+              {menu?.filter((m) => m.parentId == 0).map((m) => {
+                if (menu?.filter((m1) => m1.parentId == m.id).length > 0) {
 
                   return <UncontrolledDropdown nav>
                     <DropdownToggle
@@ -118,7 +122,7 @@ function IndexNavbar() {
                     </DropdownToggle>
 
                     <DropdownMenu>
-                      {menu.filter((m1) => m1.parentId == m.id)?.map((sm) => (<DropdownItem tag={Link} to={`/packages/${sm.name}`}>
+                      {menu.filter((m1) => m1.parentId == m.id)?.map((sm) => (<DropdownItem tag={Link} to={`${sm.pathname}`}>
                         {sm.name}
                       </DropdownItem>))}
                     </DropdownMenu>
@@ -131,12 +135,7 @@ function IndexNavbar() {
                     </NavLink>
                   </NavItem>
                 }
-
               })}
-
-
-
-
             </Nav>
           </Collapse>
         </Container>
