@@ -50,8 +50,8 @@ const nav_menu = [
     },
     {
         id: 8,
-        name: "Blogs",
-        pathname: "/blogs",
+        name: "Blog",
+        pathname: "/blog",
         parentId: 0,
         parentName: null,
     },
